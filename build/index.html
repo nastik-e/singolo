@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Singolo mine</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <h1 class="logo">SINGOLO<span class="logo__star_red">*</span></h1>
+        <a class="logo" href="index.html"
+          ><h1 class="logo__text">
+            SINGOLO<span class="logo__star_red">*</span>
+          </h1></a
+        >
         <nav class="nav">
           <ul class="nav__menu">
-            <li>HOME</li>
-            <li>SERVICES</li>
-            <li>PORTFOLIO</li>
-            <li>ABOUT</li>
-            <li>CONTACT</li>
+            <li class="nav__menu__item">HOME</li>
+            <li class="nav__menu__item">SERVICES</li>
+            <li class="nav__menu__item">PORTFOLIO</li>
+            <li class="nav__menu__item">ABOUT</li>
+            <li class="nav__menu__item">CONTACT</li>
           </ul>
         </nav>
       </header>
+      <!-- End of header -->
+      <div class="header__bottom"></div>
       <main>
-        <section>
+        <section class="phones">
           <div class="arrow">
             <img src="" alt="slide here" />
           </div>
@@ -32,58 +42,98 @@
             <img src="" alt="slide here" />
           </div>
         </section>
-        <section>
-          <h2 class="heading">Our Services</h2>
-          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimen</p>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">Custom Design</div>
-            <p class="item__text">
-              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-              laoreet, viverra lacus ut, ultrices velit.
+        <!-- End of phones -->
+        <!-- <div class="phones__bottom"></div> -->
+        <section class="services">
+          <div class="services__intro">
+            <h2 class="intro__heading">Our Services</h2>
+            <p class="intro__text">
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris
+              condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
+              ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+              cursus commodo, tortor mauris condimentum nibh.
             </p>
           </div>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">Inovative Ideas</div>
-            <p class="item__text">
-              Quisque luctus, quam eget molestie commodo, lacus purus cursus
-              purus, nec rutrum tellus dolor id lorem.
-            </p>
+          <div class="services__item services__item__custom-design">
+            <div class="item__pic">
+              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/pen.png" alt="pen" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">Custom Design</div>
+              <p class="description__text">
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
           </div>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">Love Is The Answer</div>
-            <p class="item__text">
-              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-              et consequat felis. Quisque condimentum.
-            </p>
+          <div class="services__item services__item__inovative-ideas">
+            <div class="item__pic">
+              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/bulb.png" alt="bulb" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">Inovative Ideas</div>
+              <p class="description__text">
+                Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                purus, nec rutrum tellus dolor id lorem.
+              </p>
+            </div>
           </div>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">Responsive Layout</div>
-            <p class="item__text">
-              Sed porttitor placerat rhoncus. In at nunc tellus. bMaecenas
-              blandit nunc ligula. Praesent elit leo.
-            </p>
+          <div class="services__item services__item__love-is-the-answer">
+            <div class="item__pic">
+              <img class="pic__elipse"  src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/heart.png" alt="heart" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">Love Is The Answer</div>
+              <p class="description__text">
+                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                turpis, et consequat felis. Quisque condimentum.
+              </p>
+            </div>
           </div>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">24 / 7 Support</div>
-            <p class="item__text">
-              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
-              a sem erat. Pellentesque egestas venenatis lorem .
-            </p>
+          <div class="services__item services__item__responsive-layout">
+            <div class="item__pic">
+              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/phone.png" alt="phone" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">Responsive Layout</div>
+              <p class="description__text">
+                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+                blandit nunc ligula. Praesent elit leo.
+              </p>
+            </div>
           </div>
-          <div class="item">
-            <img src="" alt="" />
-            <div class="item__logo">Feel Like A Star</div>
-            <p class="item__text">
-              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-              Fusce vitae aliquam tellus.
-            </p>
+          <div class="services__item services__item__24/7support">
+            <div class="item__pic">
+              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/bubble.png" alt="bubble" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">24 / 7 Support</div>
+              <p class="description__text">
+                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
+                Nulla a sem erat. Pellentesque egestas venenatis lorem .
+              </p>
+            </div>
+          </div>
+          <div class="services__item services__item__feel-like-a-star">
+            <div class="item__pic">
+              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img class="pic__logo" src="../src/img/star.png" alt="star" />
+            </div>
+            <div class="item__description">
+              <div class="description__title">Feel Like A Star</div>
+              <p class="description__text">
+                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                nibh. Fusce vitae aliquam tellus.
+              </p>
+            </div>
           </div>
         </section>
+        <!-- End of services -->
       </main>
     </div>
     <!-- End of container -->
