@@ -13,37 +13,51 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <a class="logo" href="index.html"
-          ><h1 class="logo__text">
-            SINGOLO<span class="logo__star_red">*</span>
-          </h1></a
-        >
-        <nav class="nav">
-          <ul class="nav__menu">
-            <li class="nav__menu__item">HOME</li>
-            <li class="nav__menu__item">SERVICES</li>
-            <li class="nav__menu__item">PORTFOLIO</li>
-            <li class="nav__menu__item">ABOUT</li>
-            <li class="nav__menu__item">CONTACT</li>
-          </ul>
-        </nav>
+      <header>
+        <div class="header">
+          <a class="logo" href="index.html"
+            ><h1 class="logo__text">
+              SINGOLO<span class="logo__star_red">*</span>
+            </h1></a
+          >
+          <nav class="nav">
+            <ul class="nav__menu">
+              <li class="nav__menu__item">HOME</li>
+              <li class="nav__menu__item">SERVICES</li>
+              <li class="nav__menu__item">PORTFOLIO</li>
+              <li class="nav__menu__item">ABOUT</li>
+              <li class="nav__menu__item">CONTACT</li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <!-- End of header -->
-      <div class="header__bottom"></div>
       <main>
-        <section class="phones">
-          <div class="arrow">
-            <img src="" alt="slide here" />
+        <section class="slider">
+          <div class="slider__arrow slider__arrow__left">
+            <img
+              class="arrow__pic"
+              src="../src/img/arrow-left.svg"
+              alt="slide here"
+            />
           </div>
-          <div class="iphone-vertical"></div>
-          <div class="iphone-horizontal"></div>
-          <div class="arrow">
-            <img src="" alt="slide here" />
+          <div class="slider__phone">
+            <div class="phone-vertical">
+              <div class="phone-vertical__screen phone__screen"></div>
+            </div>
+            <div class="phone-horizontal">
+              <div class="phone-horizontal__screen"></div>
+            </div>
+          </div>
+          <div class="slider__arrow slider__arrow__right">
+            <img
+              class="arrow__pic"
+              src="../src/img/arrow-right.svg"
+              alt="slide here"
+            />
           </div>
         </section>
-        <!-- End of phones -->
-        <!-- <div class="phones__bottom"></div> -->
+        <!-- End of slider -->
         <section class="services">
           <div class="services__intro">
             <h2 class="intro__heading">Our Services</h2>
@@ -56,7 +70,11 @@
           </div>
           <div class="services__item services__item__custom-design">
             <div class="item__pic">
-              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/pen.png" alt="pen" />
             </div>
             <div class="item__description">
@@ -69,7 +87,11 @@
           </div>
           <div class="services__item services__item__inovative-ideas">
             <div class="item__pic">
-              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/bulb.png" alt="bulb" />
             </div>
             <div class="item__description">
@@ -82,7 +104,11 @@
           </div>
           <div class="services__item services__item__love-is-the-answer">
             <div class="item__pic">
-              <img class="pic__elipse"  src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/heart.png" alt="heart" />
             </div>
             <div class="item__description">
@@ -95,7 +121,11 @@
           </div>
           <div class="services__item services__item__responsive-layout">
             <div class="item__pic">
-              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/phone.png" alt="phone" />
             </div>
             <div class="item__description">
@@ -108,7 +138,11 @@
           </div>
           <div class="services__item services__item__24/7support">
             <div class="item__pic">
-              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/bubble.png" alt="bubble" />
             </div>
             <div class="item__description">
@@ -121,7 +155,11 @@
           </div>
           <div class="services__item services__item__feel-like-a-star">
             <div class="item__pic">
-              <img class="pic__elipse" src="../src/img/Ellipse.svg" alt="logo" />
+              <img
+                class="pic__elipse"
+                src="../src/img/Ellipse.svg"
+                alt="logo"
+              />
               <img class="pic__logo" src="../src/img/star.png" alt="star" />
             </div>
             <div class="item__description">
@@ -134,6 +172,34 @@
           </div>
         </section>
         <!-- End of services -->
+        <section class="portfolio">
+          <div class="portfolio__intro">
+            <h2 class="portfolio__heading">Portfolio</h2>
+            <p class="portfolio__description">
+              Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+              eget lacinia odio sem nec elit.
+            </p>
+          </div>
+          <button class="portfolio__select">All</button>
+          <button class="portfolio__select">Web Design</button>
+          <button class="portfolio__select">Graphic Design</button>
+          <button class="portfolio__select">Artwork</button>
+          <div class="portfolio__images">
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+            <div class="image__item"></div>
+          </div>
+        </section>
+        <!-- End of portfolio -->
       </main>
     </div>
     <!-- End of container -->

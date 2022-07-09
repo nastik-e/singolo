@@ -3,6 +3,9 @@ $red: #f06c64;
 $white: #fff;
 $background-white: #f1f1f1;
 $text-grey: #666d89;
+$header-height: 89px;
+$bottom-height: 6px;
+$shadow-size: 22px;
 
 body {
   font-family: "Lato", sans-serif;
@@ -12,15 +15,19 @@ body {
     width: 1024px;
     margin: 0 auto;
     .header {
-      // position: fixed;
-      height: 89px;
+      position: fixed;
+      z-index: 10;
+      width: 1024px;
+      height: $header-height;
       background-color: $dark-grey;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 4%;
+      border-bottom: $bottom-height solid #323645;
       .logo {
         text-decoration: none;
+        padding: 0 41px;
+
         .logo__text {
           width: 19%;
           // padding: auto;
@@ -36,12 +43,14 @@ body {
         }
       }
       .nav {
-        width: 44%;
+        width: 40%;
         justify-self: flex-end;
-
+        margin-top: 12px;
+        margin-right: 23px;
         .nav__menu {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
+          padding: 0px;
           .nav__menu__item {
             list-style-type: none;
             font-size: 12px;
@@ -50,23 +59,85 @@ body {
             color: $white;
             &:hover {
               color: $red;
+              cursor: pointer;
             }
           }
         }
       }
-    }
-    .header__bottom {
-      background-color: #323645;
-      height: 6px;
     } // end of header
-    .phones {
-      height: 600px;
+    .slider {
+      height: 600px - $bottom-height * 2;
       background-color: $red;
-    } // end of phones
-    .phones__bottom {
-      height: 15px;
-      background-color: #ea676b;
-    }
+      margin-top: $header-height + $bottom-height;
+      border-bottom: $bottom-height solid #ea676b;
+      border-top: $bottom-height solid $red;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .slider__arrow {
+        align-self: stretch;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+        background-color: #ce5d56;
+        cursor: pointer;
+        }
+      }
+      .slider__arrow__left {
+        justify-self: flex-start;
+        margin-right: 20px;
+      }
+      .slider__phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center ;
+        width: 100%;  
+        .phone-vertical {
+          background-image: url(../src/img/phone__corpus.png);
+          width: 215px;
+          height: 458px;
+          background-color: white;
+          border-radius: 25px;
+          box-shadow: $shadow-size $shadow-size 5px #ce5d56;
+          position: relative;
+
+          .phone-vertical__screen {
+            background-image: url(../src/img/phone__screen_v.png);
+            width: 192px;
+            height: 332px;
+            background-color: #dbdc7e;
+            margin-top: 65px;
+            margin-left: 10px;
+          }
+        }
+
+        .phone-horizontal {
+          background-image: url(../src/img/phone__corpus_h.png);
+          background-color: white;
+          width: 458px;
+          height: 215px;
+          border-radius: 25px;
+          box-shadow: $shadow-size $shadow-size 5px #ce5d56;
+          position: relative;
+
+          .phone-horizontal__screen {
+            background-image: url(../src/img/phone__screen_h.png);
+            width: 335px;
+            height: 190px;
+            background-color: #81cfd9;
+            margin-top: 12px;
+            margin-left: 58px;
+          }
+        }
+      }
+      .slider__arrow__right {
+        justify-self: flex-end;
+        margin-left: 20px + $shadow-size;
+      }
+    } // end of slider
     .services {
       height: 420px;
       background-color: $background-white;
@@ -106,13 +177,11 @@ body {
             width: 60px;
             height: 60px;
             margin: 5px;
-     
           }
           .pic__logo {
             max-width: 32px;
             max-height: 32px;
             position: absolute;
-   
           }
         }
 
@@ -129,7 +198,8 @@ body {
             line-height: 22px;
           }
         }
-      }
+      } // end of services item
     } //end of services
+    
   } // end of container
-} // end of body
+} // end of body\
