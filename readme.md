@@ -1,0 +1,1 @@
+https://github.com/nastik-e/singolo.git
