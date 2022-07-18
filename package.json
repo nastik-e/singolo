@@ -4,6 +4,6 @@
     "sass": "^1.53.0"
   },
   "scripts": {
-    "translate": "sass styles.scss build/styles.css"
+    "translate": "sass build/styles.scss build/styles.css"
   }
 }

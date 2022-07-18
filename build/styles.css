@@ -1,7 +1,53 @@
+body .container .quote .quote__intro, body .container .about .about__intro, body .container .portfolio .portfolio__intro, body .container .services .services__intro {
+  margin: 19px 0 12px;
+}
+body .container .quote .quote__intro .intro__heading, body .container .about .about__intro .intro__heading, body .container .portfolio .portfolio__intro .intro__heading, body .container .services .services__intro .intro__heading {
+  font-size: 30px;
+  margin: 0px;
+}
+body .container .quote .quote__intro .intro__text, body .container .about .about__intro .intro__text, body .container .portfolio .portfolio__intro .intro__text, body .container .services .services__intro .intro__text {
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 14px;
+  margin-bottom: 0px;
+}
+
+body .container .services .service__list .list__item .item__pic, body .container .footer .footer__contacts .contacts__item, body .container .about .about__team .team__member .member__contacts .contacts__item {
+  border: 2px solid #666d89;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body .container .footer .footer__contacts, body .container .about .about__team .team__member .member__contacts {
+  display: flex;
+  flex-direction: row;
+}
+body .container .footer .footer__contacts .contacts__item, body .container .about .about__team .team__member .member__contacts .contacts__item {
+  height: 27px;
+  width: 27px;
+  margin-right: 10px;
+}
+body .container .footer .footer__contacts .item__facebook, body .container .about .about__team .team__member .member__contacts .item__facebook {
+  background-image: url(../src/about-us/facebook.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .container .footer .footer__contacts .item__google, body .container .about .about__team .team__member .member__contacts .item__google {
+  background-image: url(../src/about-us/google+.svg);
+}
+body .container .footer .footer__contacts .item__twitter, body .container .about .about__team .team__member .member__contacts .item__twitter {
+  background-image: url(../src/about-us/twitter.svg);
+}
+body .container .footer .footer__contacts .item__linkedin, body .container .about .about__team .team__member .member__contacts .item__linkedin {
+  background-image: url(../src/about-us/linkedin.svg);
+}
+
 body {
   font-family: "Lato", sans-serif;
   margin: 0px;
   display: flex;
+  color: #666d89;
 }
 body .container {
   width: 1024px;
@@ -65,14 +111,14 @@ body .container .slider {
   align-items: center;
   justify-content: space-between;
 }
-body .container .slider .slider__arrow {
+body .container .slider__arrow {
   align-self: stretch;
   width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .container .slider .slider__arrow:hover {
+body .container .slider__arrow:hover {
   background-color: #ce5d56;
   cursor: pointer;
 }
@@ -127,61 +173,268 @@ body .container .slider .slider__arrow__right {
 body .container .services {
   height: 420px;
   background-color: #f1f1f1;
-  color: #666d89;
   padding: 4%;
+}
+body .container .services .service__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3 1fr);
   grid-row-gap: 5px;
   grid-column-gap: 15px;
+  margin-top: 50px;
 }
-body .container .services .services__intro {
-  grid-column: 1/span 3;
-  margin-bottom: 20px;
-}
-body .container .services .services__intro .intro__heading {
-  font-size: 30px;
-  margin-bottom: 0px;
-}
-body .container .services .services__intro .intro__text {
-  font-size: 18px;
-  line-height: 30px;
-  margin-top: 14px;
-}
-body .container .services .services__item {
+body .container .services .service__list .list__item {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
 }
-body .container .services .services__item .item__pic {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+body .container .services .service__list .list__item .item__pic {
+  height: 55px;
+  width: 125px;
 }
-body .container .services .services__item .item__pic .pic__elipse {
-  width: 60px;
-  height: 60px;
-  margin: 5px;
+body .container .services .service__list .list__item .pic__pen {
+  background-image: url(../src/img/pen.png);
 }
-body .container .services .services__item .item__pic .pic__logo {
-  max-width: 32px;
-  max-height: 32px;
-  position: absolute;
+body .container .services .service__list .list__item .pic__bulb {
+  background-image: url(../src/img/bulb.png);
 }
-body .container .services .services__item .item__description {
-  padding-left: 10px;
+body .container .services .service__list .list__item .pic__heart {
+  background-image: url(../src/img/heart.png);
 }
-body .container .services .services__item .item__description .description__title {
+body .container .services .service__list .list__item .pic__phone {
+  background-image: url(../src/img/phone.png);
+}
+body .container .services .service__list .list__item .pic__bubble {
+  background-image: url(../src/img/bubble.png);
+}
+body .container .services .service__list .list__item .pic__star {
+  background-image: url(../src/img/star.png);
+}
+body .container .services .service__list .list__item .item__description {
+  margin-left: 25px;
+}
+body .container .services .service__list .list__item .item__description .description__title {
   font-size: 18px;
   line-height: 18px;
   font-weight: 900;
 }
-body .container .services .services__item .item__description .description__text {
+body .container .services .service__list .list__item .item__description .description__text {
   font-size: 12px;
   line-height: 22px;
+}
+body .container .portfolio {
+  padding: 4%;
+  height: 785px;
+  background-color: #2d303a;
+}
+body .container .portfolio .portfolio__select {
+  margin-bottom: 20px;
+}
+body .container .portfolio .portfolio__select .select__buttons {
+  border: 1px solid #666d89;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #666d89;
+  margin-right: 9px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Lato";
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+}
+body .container .portfolio .portfolio__select .select__buttons__active {
+  color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+body .container .portfolio .portfolio__images {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+body .container .portfolio .portfolio__images .images__item {
+  width: 220px;
+  height: 187px;
+}
+body .container .portfolio .portfolio__images .image__ship {
+  background-image: url(../src/img/portfolio/ship.svg);
+}
+body .container .portfolio .portfolio__images .image__girl {
+  background-image: url(../src/img/portfolio/girl.svg);
+}
+body .container .portfolio .portfolio__images .image__city {
+  background-image: url(../src/img/portfolio/city.svg);
+}
+body .container .portfolio .portfolio__images .image__robot {
+  background-image: url(../src/img/portfolio/robot.svg);
+}
+body .container .portfolio .portfolio__images .image__monsters {
+  background-image: url(../src/img/portfolio/monsters.svg);
+}
+body .container .portfolio .portfolio__images .image__pile {
+  background-image: url(../src/img/portfolio/pile.svg);
+}
+body .container .portfolio .portfolio__images .image__robots {
+  background-image: url(../src/img/portfolio/robots.svg);
+}
+body .container .portfolio .portfolio__images .image__birds {
+  background-image: url(../src/img/portfolio/birds.svg);
+}
+body .container .portfolio .portfolio__images .image__city-monster {
+  background-image: url(../src/img/portfolio/city\ monster.svg);
+}
+body .container .portfolio .portfolio__images .image__tape {
+  background-image: url(../src/img/portfolio/tape.svg);
+}
+body .container .portfolio .portfolio__images .image__bloody-monster {
+  background-image: url(../src/img/portfolio/bloody\ monster.svg);
+}
+body .container .portfolio .portfolio__images .image__wall {
+  background-image: url(../src/img/portfolio/wall.svg);
+}
+body .container .about {
+  padding: 4%;
+  background-color: #f1f1f1;
+  height: 653px;
+}
+body .container .about .about__team {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+}
+body .container .about .about__team .team__member .member__pic {
+  height: 300px;
+  width: 300px;
+}
+body .container .about .about__team .team__member .pic__1 {
+  background-image: url(../src/about-us/Adam\ Jensen.svg);
+}
+body .container .about .about__team .team__member .pic__2 {
+  background-image: url(../src/about-us/Desmond\ Miles.svg);
+}
+body .container .about .about__team .team__member .pic__3 {
+  background-image: url(../src/about-us/Scolara\ Visari.svg);
+}
+body .container .about .about__team .team__member .member__info {
+  margin-top: 20px;
+}
+body .container .about .about__team .team__member .member__info .info__heading {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+}
+body .container .about .about__team .team__member .member__info .info__text {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+}
+body .container .about .about__team .team__member .member__contacts {
+  margin-top: 25px;
+}
+body .container .quote {
+  height: 570px;
+  background-color: #f06c64;
+  padding: 4%;
+}
+body .container .quote .quote__intro {
+  color: #f1f1f1;
+}
+body .container .quote .quote__content {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  color: #f1f1f1;
+}
+body .container .quote .quote__content .content__form {
+  width: 65%;
+}
+body .container .quote .quote__content .content__form .form__item {
+  width: 100%;
+  height: 35px;
+  background-color: #d6564f;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-left: 2%;
+}
+body .container .quote .quote__content .content__form ::-moz-placeholder {
+  color: white;
+  opacity: 40%;
+  font-size: 12px;
+  line-height: 22px;
+  font-family: lato, sans-serif;
+}
+body .container .quote .quote__content .content__form :-ms-input-placeholder {
+  color: white;
+  opacity: 40%;
+  font-size: 12px;
+  line-height: 22px;
+  font-family: lato, sans-serif;
+}
+body .container .quote .quote__content .content__form ::placeholder {
+  color: white;
+  opacity: 40%;
+  font-size: 12px;
+  line-height: 22px;
+  font-family: lato, sans-serif;
+}
+body .container .quote .quote__content .content__form .form__text {
+  height: 200px;
+}
+body .container .quote .quote__content .content__inf {
+  width: 32%;
+  margin-left: 27px;
+  font-size: 18px;
+}
+body .container .quote .quote__content .content__inf .inf__heading {
+  margin-top: 0;
+  font-weight: bold;
+}
+body .container .quote .quote__content .content__inf .inf__text {
+  overflow-wrap: normal;
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: 8px;
+}
+body .container .quote .quote__content .content__inf .inf__links {
+  margin-top: 22px;
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item .item__logo {
+  height: 16px;
+  width: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item .logo__location {
+  background-image: url(../src/img/location.svg);
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item .logo__phone {
+  background-image: url(../src/img/phone-contact.svg);
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item .logo__mail {
+  background-image: url(../src/img/mail.svg);
+}
+body .container .quote .quote__content .content__inf .inf__links .links__item .item__text {
+  font-size: 12px;
+  margin-left: 13px;
+}
+body .container .footer {
+  padding: 0 4%;
+  background-color: #2d303a;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 6px;
 }/*# sourceMappingURL=styles.css.map */
