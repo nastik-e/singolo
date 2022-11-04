@@ -6,6 +6,7 @@ $background-white: #f1f1f1;
 $header-height: 89px;
 $bottom-height: 6px;
 $shadow-size: 22px;
+$container-width: 1024px;
 %section-intro {
   margin: 19px 0 12px;
   .intro__heading {
@@ -57,12 +58,12 @@ body {
   display: flex;
   color: $text-grey;
   .container {
-    width: 1024px;
+    width: $container-width;
     margin: 0 auto;
     .header {
       position: fixed;
       z-index: 10;
-      width: 1024px;
+      width: $container-width;
       height: $header-height;
       background-color: $dark-grey;
       display: flex;
@@ -102,355 +103,412 @@ body {
             line-height: 6.23px;
             font-weight: bold;
             color: $white;
-            &:hover {
-              color: $red;
-              cursor: pointer;
+            a {
+              text-decoration: none;
+              color: $background-white;
+              &:hover {
+                color: $red;
+              }
+              &.red {
+                color: $red;
+              }
             }
           }
         }
       }
     } // end of header
-    // .main {
-    .slider {
-      height: 600px - $bottom-height * 2;
-      background-color: $red;
-      margin-top: $header-height + $bottom-height;
-      border-bottom: $bottom-height solid #ea676b;
-      border-top: $bottom-height solid $red;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      &__arrow {
-        align-self: stretch;
-        width: 130px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  
+    main {
+      .slider {
+        height: 600px - $bottom-height * 2;
+        margin-top: $header-height + $bottom-height;
 
-        &:hover {
-          background-color: #ce5d56;
-          cursor: pointer;
-        }
-      }
-      .slider__arrow__left {
-        justify-self: flex-start;
-        margin-right: 20px;
-      }
-      .slider__phone {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        .phone-vertical {
-          background-image: url(../src/img/phone__corpus.png);
-          width: 215px;
-          height: 458px;
-          background-color: white;
-          border-radius: 25px;
-          box-shadow: $shadow-size $shadow-size 5px #ce5d56;
-          position: relative;
+              &__arrow {
+          align-self: stretch;
+          width: 130px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          .phone-vertical__screen {
-            background-image: url(../src/img/phone__screen_v.png);
-            width: 192px;
-            height: 332px;
-            background-color: #dbdc7e;
-            margin-top: 65px;
-            margin-left: 10px;
+          &:hover {
+            background-color: #201f1f22;
+            cursor: pointer;
           }
         }
+        .slider__arrow__left {
+          justify-self: flex-start;
+          margin-right: 20px;
+        }
+        .slider__phone {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .phone-vertical {
+            background-image: url(../src/img/phone__corpus.png);
+            width: 215px;
+            height: 458px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: $shadow-size $shadow-size 5px #ce5d56;
+            position: relative;
+& > .screenOff {
+  background: #2d303a;
+                }
+            .phone-vertical__screen {
+              background-image: url(../src/img/phone__screen_v.png);
+              width: 192px;
+              height: 332px;
+              background-color: #dbdc7e;
+              margin-top: 65px;
+              margin-left: 10px;
+              
+            }
+          }
 
-        .phone-horizontal {
-          background-image: url(../src/img/phone__corpus_h.png);
-          background-color: white;
-          width: 458px;
-          height: 215px;
-          border-radius: 25px;
-          box-shadow: $shadow-size $shadow-size 5px #ce5d56;
-          position: relative;
+          .phone-horizontal {
+            background-image: url(../src/img/phone__corpus_h.png);
+            background-color: white;
+            width: 458px;
+            height: 215px;
+            border-radius: 25px;
+            box-shadow: $shadow-size $shadow-size 5px #ce5d56;
+            position: relative;
 
-          .phone-horizontal__screen {
-            background-image: url(../src/img/phone__screen_h.png);
-            width: 335px;
-            height: 190px;
-            background-color: #81cfd9;
-            margin-top: 12px;
-            margin-left: 58px;
+            .phone-horizontal__screen {
+              background-image: url(../src/img/phone__screen_h.png);
+              width: 335px;
+              height: 190px;
+              background-color: #81cfd9;
+              margin-top: 12px;
+              margin-left: 58px;
+            }
+          }
+          .hidden{
+            display: none;
+          }
+        }
+        .slider__hidden {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          height: 600px - $bottom-height * 2;
+          background-color: #648bf0;
+          border-bottom: $bottom-height solid #81a0f0;
+          // border-top: $bottom-height solid $red;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 500px;
+            width: 500px;
+          }
+         
+        }
+        .hidden{
+          display: none;
+        }
+
+        .slider__arrow__right {
+          justify-self: flex-end;
+          margin-left: 20px + $shadow-size;
+        }
+    
+      } // end of slider
+      .red {
+        background-color: $red;
+        border-bottom: $bottom-height solid #ea676b;
+        border-top: $bottom-height solid $red;
+
+      }
+      .blue {
+        background-color: #648BF0;
+        border-bottom: $bottom-height solid #648BF0;
+        border-top: $bottom-height solid #648BF0;
+      }
+
+      .services {
+        height: 420px;
+        background-color: $background-white;
+        padding: 4%;
+        .services__intro {
+          @extend %section-intro;
+        }
+        .service__list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3 1fr);
+          grid-row-gap: 5px;
+          grid-column-gap: 15px;
+          margin-top: 50px;
+
+          .list__item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+
+            .item__pic {
+              @extend %circle_elements;
+              height: 55px;
+              width: 125px;
+            }
+            .pic__pen {
+              background-image: url(../src/img/pen.png);
+            }
+            .pic__bulb {
+              background-image: url(../src/img/bulb.png);
+            }
+            .pic__heart {
+              background-image: url(../src/img/heart.png);
+            }
+            .pic__phone {
+              background-image: url(../src/img/phone.png);
+            }
+            .pic__bubble {
+              background-image: url(../src/img/bubble.png);
+            }
+            .pic__star {
+              background-image: url(../src/img/star.png);
+            }
+
+            .item__description {
+              margin-left: 25px;
+
+              .description__title {
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: 900;
+              }
+              .description__text {
+                font-size: 12px;
+                line-height: 22px;
+              }
+            }
+          }
+        } // end of services list
+      } //end of services
+      .portfolio {
+        padding: 4%;
+        height: 785px;
+        background-color: $dark-grey;
+        .portfolio__intro {
+          @extend %section-intro;
+        }
+        .portfolio__select {
+          margin-bottom: 20px;
+          .select__buttons {
+            border: 1px solid $text-grey;
+            background-color: transparent;
+            border-radius: 4px;
+            color: $text-grey;
+            margin-right: 9px;
+            background-color: transparent;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            font-family: "Lato";
+            height: 22px;
+            text-align: center;
+            vertical-align: middle;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .select__buttons__active {
+            color: $background-white;
+            border: 1px solid $background-white;
+          }
+        }
+        .portfolio__images {
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+          .images__item {
+            width: 220px;
+            height: 187px;
+          }
+          .image__ship {
+            background-image: url(../src/img/portfolio/ship.svg);
+          }
+          .image__girl {
+            background-image: url(../src/img/portfolio/girl.svg);
+          }
+          .image__city {
+            background-image: url(../src/img/portfolio/city.svg);
+          }
+          .image__robot {
+            background-image: url(../src/img/portfolio/robot.svg);
+          }
+          .image__monsters {
+            background-image: url(../src/img/portfolio/monsters.svg);
+          }
+          .image__pile {
+            background-image: url(../src/img/portfolio/pile.svg);
+          }
+          .image__robots {
+            background-image: url(../src/img/portfolio/robots.svg);
+          }
+          .image__birds {
+            background-image: url(../src/img/portfolio/birds.svg);
+          }
+          .image__city-monster {
+            background-image: url(../src/img/portfolio/city\ monster.svg);
+          }
+          .image__tape {
+            background-image: url(../src/img/portfolio/tape.svg);
+          }
+          .image__bloody-monster {
+            background-image: url(../src/img/portfolio/bloody\ monster.svg);
+          }
+          .image__wall {
+            background-image: url(../src/img/portfolio/wall.svg);
           }
         }
       }
-      .slider__arrow__right {
-        justify-self: flex-end;
-        margin-left: 20px + $shadow-size;
-      }
-    } // end of slider
-    .services {
-      height: 420px;
-      background-color: $background-white;
-      padding: 4%;
-      .services__intro {
-        @extend %section-intro;
-      }
-      .service__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3 1fr);
-        grid-row-gap: 5px;
-        grid-column-gap: 15px;
-        margin-top: 50px;
+      .about {
+        padding: 4%;
+        background-color: $background-white;
+        height: 653px;
+        .about__intro {
+          @extend %section-intro;
+        }
+        .about__team {
+          margin-top: 48px;
 
-        .list__item {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 20px;
+          .team__member {
+            .member__pic {
+              height: 300px;
+              width: 300px;
+            }
+            .pic__1 {
+              background-image: url(../src/about-us/Adam\ Jensen.svg);
+            }
+            .pic__2 {
+              background-image: url(../src/about-us/Desmond\ Miles.svg);
+            }
+            .pic__3 {
+              background-image: url(../src/about-us/Scolara\ Visari.svg);
+            }
+            .member__info {
+              margin-top: 20px;
+              .info__heading {
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 18px;
+              }
+              .info__text {
+                margin-top: 5px;
+                font-size: 12px;
+                line-height: 22px;
+                font-weight: 400;
+              }
+            }
+            .member__contacts {
+              margin-top: 25px;
+              @extend %contacts;
+              .contacts__item:hover {
+                margin-top: 7px;
+              }
+            }
+          }
+        }
+      } // end of about
+      .quote {
+        height: 570px;
+        background-color: $red;
+        padding: 4%;
+        .quote__intro {
+          @extend %section-intro;
+          color: $background-white;
+        }
+        .quote__content {
+          margin-top: 45px;
           display: flex;
           flex-direction: row;
-          margin-bottom: 10px;
-
-          .item__pic {
-            @extend %circle_elements;
-            height: 55px;
-            width: 125px;
-          }
-          .pic__pen {
-            background-image: url(../src/img/pen.png);
-          }
-          .pic__bulb {
-            background-image: url(../src/img/bulb.png);
-          }
-          .pic__heart {
-            background-image: url(../src/img/heart.png);
-          }
-          .pic__phone {
-            background-image: url(../src/img/phone.png);
-          }
-          .pic__bubble {
-            background-image: url(../src/img/bubble.png);
-          }
-          .pic__star {
-            background-image: url(../src/img/star.png);
-          }
-
-          .item__description {
-            margin-left: 25px;
-
-            .description__title {
-              font-size: 18px;
-              line-height: 18px;
-              font-weight: 900;
+          .content__form {
+            width: 65%;
+            .form__item {
+              width: 100%;
+              height: 35px;
+              background-color: #d6564f;
+              border: none;
+              border-radius: 4px;
+              margin-bottom: 20px;
+              padding-left: 2%;
             }
-            .description__text {
+            ::placeholder {
+              color: white;
+              opacity: 40%;
               font-size: 12px;
               line-height: 22px;
+              font-family: lato, sans-serif;
+            }
+            .form__text {
+              height: 200px;
+              resize: none;
             }
           }
-        }
-      } // end of services list
-    } //end of services
-    .portfolio {
-      padding: 4%;
-      height: 785px;
-      background-color: $dark-grey;
-      .portfolio__intro {
-        @extend %section-intro;
-      }
-      .portfolio__select {
-        margin-bottom: 20px;
-        .select__buttons {
-          border: 1px solid $text-grey;
-          background-color: transparent;
-          border-radius: 4px;
-          color: $text-grey;
-          margin-right: 9px;
-          background-color: transparent;
-          font-weight: 400;
-          font-size: 12px;
-          line-height: 18px;
-          font-family: "Lato";
-          height: 22px;
-          text-align: center;
-          vertical-align: middle;
-        }
-        .select__buttons__active {
-          color: $background-white;
-          border: 1px solid $background-white;
-        }
-      }
-      .portfolio__images {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-        .images__item {
-          width: 220px;
-          height: 187px;
-        }
-        .image__ship {
-          background-image: url(../src/img/portfolio/ship.svg);
-        }
-        .image__girl {
-          background-image: url(../src/img/portfolio/girl.svg);
-        }
-        .image__city {
-          background-image: url(../src/img/portfolio/city.svg);
-        }
-        .image__robot {
-          background-image: url(../src/img/portfolio/robot.svg);
-        }
-        .image__monsters {
-          background-image: url(../src/img/portfolio/monsters.svg);
-        }
-        .image__pile {
-          background-image: url(../src/img/portfolio/pile.svg);
-        }
-        .image__robots {
-          background-image: url(../src/img/portfolio/robots.svg);
-        }
-        .image__birds {
-          background-image: url(../src/img/portfolio/birds.svg);
-        }
-        .image__city-monster {
-          background-image: url(../src/img/portfolio/city\ monster.svg);
-        }
-        .image__tape {
-          background-image: url(../src/img/portfolio/tape.svg);
-        }
-        .image__bloody-monster {
-          background-image: url(../src/img/portfolio/bloody\ monster.svg);
-        }
-        .image__wall {
-          background-image: url(../src/img/portfolio/wall.svg);
-        }
-      }
-    }
-    .about {
-      padding: 4%;
-      background-color: $background-white;
-      height: 653px;
-      .about__intro {
-        @extend %section-intro;
-      }
-      .about__team {
-        margin-top: 48px;
+          .content__inf {
+            width: 32%;
+            margin-left: 27px;
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 20px;
-        .team__member {
-          .member__pic {
-            height: 300px;
-            width: 300px;
-          }
-          .pic__1 {
-            background-image: url(../src/about-us/Adam\ Jensen.svg);
-          }
-          .pic__2 {
-            background-image: url(../src/about-us/Desmond\ Miles.svg);
-          }
-          .pic__3 {
-            background-image: url(../src/about-us/Scolara\ Visari.svg);
-          }
-          .member__info {
-            margin-top: 20px;
-            .info__heading {
-              font-weight: 900;
-              font-size: 18px;
-              line-height: 18px;
+            .inf__heading {
+              margin-top: 0;
+              font-weight: bold;
             }
-            .info__text {
-              margin-top: 5px;
+            font-size: 18px;
+            .inf__text {
+              overflow-wrap: normal;
               font-size: 12px;
               line-height: 22px;
-              font-weight: 400;
-            }
-          }
-          .member__contacts {
-            margin-top: 25px;
-            @extend %contacts;
-          }
-        }
-      }
-    } // end of about
-    .quote {
-      height: 570px;
-      background-color: $red;
-      padding: 4%;
-      .quote__intro {
-        @extend %section-intro;
-        color: $background-white;
-      }
-      .quote__content {
-        margin-top: 45px;
-        display: flex;
-        flex-direction: row;
-        .content__form {
-          width: 65%;
-          .form__item {
-            width: 100%;
-            height: 35px;
-            background-color: #d6564f;
-            border: none;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            padding-left: 2%;
-            
-          }
-          ::placeholder {
-            color: white;
-            opacity: 40%;
-            font-size: 12px;
-            line-height: 22px;
-            font-family: lato, sans-serif;
-          }
-          .form__text {
-            height: 200px;
-          }
-        }
-        .content__inf {
-          width: 32%;
-          margin-left: 27px;
-
-          .inf__heading {
-            margin-top: 0;
-            font-weight: bold;
-          }
-          font-size: 18px;
-          .inf__text {
-            overflow-wrap: normal;
-            font-size: 12px;
-            line-height: 22px;
-            margin-top: 8px;
-          }
-          .inf__links {
-            margin-top: 22px;
-
-            .links__item {
-              display: flex;
-              flex-direction: row;
               margin-top: 8px;
-              .item__logo {
-                height: 16px;
-                width: 12px;
-                background-repeat: no-repeat;
-                background-position: center;
-              }
-              .logo__location {
-                background-image: url(../src/img/location.svg);
-              }
-              .logo__phone {
-                background-image: url(../src/img/phone-contact.svg);
-              }
-              .logo__mail {
-                background-image: url(../src/img/mail.svg);
-              }
-              .item__text {
-                font-size: 12px;
-                margin-left: 13px;
+            }
+            .inf__links {
+              margin-top: 22px;
+
+              .links__item {
+                display: flex;
+                flex-direction: row;
+                margin-top: 8px;
+                .item__logo {
+                  height: 16px;
+                  width: 12px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+                .logo__location {
+                  background-image: url(../src/img/location.svg);
+                }
+                .logo__phone {
+                  background-image: url(../src/img/phone-contact.svg);
+                }
+                .logo__mail {
+                  background-image: url(../src/img/mail.svg);
+                }
+                .item__text {
+                  font-size: 12px;
+                  margin-left: 13px;
+                  text-decoration: none;
+                  color: $background-white;
+                }
               }
             }
           }
+          color: $background-white;
         }
-        color: $background-white;
-      }
-    } // end of quote
-    // } // end of main
+      } // end of quote
+    } // end of main
     .footer {
       padding: 0 4%;
       background-color: $dark-grey;
@@ -462,7 +520,11 @@ body {
       line-height: 6px;
       .footer__contacts {
         @extend %contacts;
+        .contacts__item:hover {
+          border: 2px solid $background-white;
+        }
       }
     }
   } // end of container
 } // end of body
+

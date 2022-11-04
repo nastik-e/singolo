@@ -22,43 +22,50 @@
           >
           <nav class="nav">
             <ul class="nav__menu">
-              <li class="nav__menu__item">HOME</li>
-              <li class="nav__menu__item">SERVICES</li>
-              <li class="nav__menu__item">PORTFOLIO</li>
-              <li class="nav__menu__item">ABOUT</li>
-              <li class="nav__menu__item">CONTACT</li>
+              <li class="nav__menu__item"><a href="#home">HOME</a></li>
+              <li class="nav__menu__item"><a href="#services">SERVICES</a></li>
+              <li class="nav__menu__item">
+                <a href="#portfolio">PORTFOLIO</a>
+              </li>
+              <li class="nav__menu__item"><a href="#about">ABOUT</a></li>
+              <li class="nav__menu__item"><a href="#contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
       </header>
       <!-- End of header -->
       <main>
-        <section class="slider">
+        <section class="slider red" id="home">
+          <h2 class="intro__heading"></h2>
           <div class="slider__arrow slider__arrow__left">
             <img
-              class="arrow__pic"
+              class="arrow__pic arrow-left"
               src="../src/img/arrow-left.svg"
               alt="slide here"
             />
           </div>
           <div class="slider__phone">
             <div class="phone-vertical">
-              <div class="phone-vertical__screen phone__screen"></div>
+              <div class="phone-vertical__screen"></div>
             </div>
             <div class="phone-horizontal">
               <div class="phone-horizontal__screen"></div>
             </div>
           </div>
+          <div class="slider__hidden hidden">
+            <img src="../src/img/slider.png" alt="slider" />
+          </div>
           <div class="slider__arrow slider__arrow__right">
             <img
-              class="arrow__pic"
+              class="arrow__pic arrow-right"
               src="../src/img/arrow-right.svg"
               alt="slide here"
             />
           </div>
         </section>
+
         <!-- End of slider -->
-        <section class="services">
+        <section class="services" id="services">
           <div class="services__intro">
             <h2 class="intro__heading">Our Services</h2>
             <p class="intro__text">
@@ -133,7 +140,7 @@
           <!-- End of services__list -->
         </section>
         <!-- End of services -->
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="portfolio__intro">
             <h2 class="intro__heading">Portfolio</h2>
             <p class="intro__text">
@@ -163,7 +170,7 @@
           </div>
           <!-- End of portfolio -->
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__intro">
             <h2 class="intro__heading">About Us</h2>
             <div class="intro__text">
@@ -184,10 +191,26 @@
                 </div>
               </div>
               <div class="member__contacts">
-                <div class="contacts__item item__facebook"></div>
-                <div class="contacts__item item__google"></div>
-                <div class="contacts__item item__twitter"></div>
-                <div class="contacts__item item__linkedin"></div>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="contacts__item item__facebook"
+                ></a>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  class="contacts__item item__google"
+                ></a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="contacts__item item__twitter"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="contacts__item item__linkedin"
+                ></a>
               </div>
             </div>
             <div class="team__member">
@@ -200,10 +223,26 @@
                 </div>
               </div>
               <div class="member__contacts">
-                <div class="contacts__item item__facebook"></div>
-                <div class="contacts__item item__google"></div>
-                <div class="contacts__item item__twitter"></div>
-                <div class="contacts__item item__linkedin"></div>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="contacts__item item__facebook"
+                ></a>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  class="contacts__item item__google"
+                ></a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="contacts__item item__twitter"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="contacts__item item__linkedin"
+                ></a>
               </div>
             </div>
             <div class="team__member">
@@ -216,16 +255,32 @@
                 </div>
               </div>
               <div class="member__contacts media__contacts">
-                <div class="contacts__item item__facebook"></div>
-                <div class="contacts__item item__google"></div>
-                <div class="contacts__item item__twitter"></div>
-                <div class="contacts__item item__linkedin"></div>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="contacts__item item__facebook"
+                ></a>
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  class="contacts__item item__google"
+                ></a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="contacts__item item__twitter"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="contacts__item item__linkedin"
+                ></a>
               </div>
             </div>
           </div>
         </section>
         <!-- End of about -->
-        <section class="quote">
+        <section class="quote" id="contact">
           <div class="quote__intro">
             <h2 class="intro__heading">Get a Quote</h2>
             <div class="intro__text">
@@ -273,33 +328,65 @@
               <div class="inf__links">
                 <div class="links__item">
                   <div class="item__logo logo__location"></div>
-                  <div class="item__text">Elm St.14/05 Lost City</div>
+                  <a
+                    href="https://goo.gl/maps/u6Sf9EfjQ4t46RvT6"
+                    target="_blank"
+                    class="item__text"
+                    >Elm St.14/05 Lost City</a
+                  >
                 </div>
                 <div class="links__item">
                   <div class="item__logo logo__phone"></div>
-                  <div class="item__text">03528 331 86 35</div>
+                  <a
+                    href="tel:03528 331 86 35"
+                    target="_blank"
+                    class="item__text"
+                    >03528 331 86 35</a
+                  >
                 </div>
 
                 <div class="links__item">
                   <div class="item__logo logo__mail"></div>
-                  <div class="item__text">info@singolo.com</div>
+                  <a
+                    href="mailto:info@singolo.com"
+                    target="_blank"
+                    class="item__text"
+                    >info@singolo.com</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </section>
         <!-- End of quote -->
-        <footer class="footer">
-          <div class="footer__copyright">© Copyright 2013</div>
-          <div class="footer__contacts">
-            <div class="contacts__item item__facebook"></div>
-            <div class="contacts__item item__google"></div>
-            <div class="contacts__item item__twitter"></div>
-            <div class="contacts__item item__linkedin"></div>
-          </div>
-        </footer>
       </main>
+      <footer class="footer">
+        <div class="footer__copyright">© Copyright 2022</div>
+        <div class="footer__contacts">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="contacts__item item__facebook"
+          ></a>
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            class="contacts__item item__google"
+          ></a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="contacts__item item__twitter"
+          ></a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="contacts__item item__linkedin"
+          ></a>
+        </div>
+      </footer>
     </div>
     <!-- End of container -->
+    <script src="app.js"></script>
   </body>
 </html>
