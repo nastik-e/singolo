@@ -7,6 +7,9 @@ $header-height: 89px;
 $bottom-height: 6px;
 $shadow-size: 22px;
 $container-width: 1024px;
+%screen-off {
+  background: #2d303a !important; 
+}
 %section-intro {
   margin: 19px 0 12px;
   .intro__heading {
@@ -117,7 +120,7 @@ body {
         }
       }
     } // end of header
-  
+
     main {
       .slider {
         height: 600px - $bottom-height * 2;
@@ -126,7 +129,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-              &__arrow {
+        &__arrow {
           align-self: stretch;
           width: 130px;
           display: flex;
@@ -156,9 +159,7 @@ body {
             border-radius: 25px;
             box-shadow: $shadow-size $shadow-size 5px #ce5d56;
             position: relative;
-& > .screenOff {
-  background: #2d303a;
-                }
+
             .phone-vertical__screen {
               background-image: url(../src/img/phone__screen_v.png);
               width: 192px;
@@ -166,7 +167,9 @@ body {
               background-color: #dbdc7e;
               margin-top: 65px;
               margin-left: 10px;
-              
+            }
+            & > .screen_off {
+              @extend %screen-off;
             }
           }
 
@@ -187,8 +190,11 @@ body {
               margin-top: 12px;
               margin-left: 58px;
             }
+            .screen_off {
+              @extend %screen-off;
+            }
           }
-          .hidden{
+          .hidden {
             display: none;
           }
         }
@@ -210,9 +216,8 @@ body {
             height: 500px;
             width: 500px;
           }
-         
         }
-        .hidden{
+        .hidden {
           display: none;
         }
 
@@ -220,18 +225,16 @@ body {
           justify-self: flex-end;
           margin-left: 20px + $shadow-size;
         }
-    
       } // end of slider
       .red {
         background-color: $red;
         border-bottom: $bottom-height solid #ea676b;
         border-top: $bottom-height solid $red;
-
       }
       .blue {
-        background-color: #648BF0;
-        border-bottom: $bottom-height solid #648BF0;
-        border-top: $bottom-height solid #648BF0;
+        background-color: #648bf0;
+        border-bottom: $bottom-height solid #648bf0;
+        border-top: $bottom-height solid #648bf0;
       }
 
       .services {
@@ -527,4 +530,3 @@ body {
     }
   } // end of container
 } // end of body
-

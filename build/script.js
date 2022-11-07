@@ -26,41 +26,66 @@ const navHref = document.querySelectorAll(".nav__menu__item > a");
 const sectionHeadings = document.querySelectorAll(".intro__heading");
 // sectionHeadings.forEach((el) => console.log(el.offsetTop))
 
-document.addEventListener("scroll", (event) => {
-  // navHref.forEach((el) => {
-  //     el.classList.remove('red');
-  //   if (window.scrollY <= sectionHeadings[0].offsetTop) {
-  //     navHref[0].classList.add("red");
-  //   } else if (window.scrollY >= sectionHeadings[0].offsetTop
-  //     && window.scrollY < sectionHeadings[1].offsetTop
-  //     ) {
-  //     navHref[1].classList.add("red");
-  // } else if (window.scrollY >= sectionHeadings[1].offsetTop
-  //      && window.scrollY < sectionHeadings[2].offsetTop
-  //      ) {
-  //     navHref[2].classList.add("red");
-  // } else if (window.scrollY >= sectionHeadings[2].offsetTop
-  //     && window.scrollY < sectionHeadings[3].offsetTop
-  //     ) {
-  //     navHref[3].classList.add("red");
-  // } else if (window.scrollY >= sectionHeadings[3].offsetTop ) {
-  //     navHref[4].classList.add("red");
-  //   }
+// document.addEventListener("scroll", (event) => {
+//   navHref.forEach((el) => {
+//     el.classList.remove("red");
+//     if (window.scrollY < sectionHeadings[0].offsetTop) {
+//       navHref[0].classList.add("red");
+//     } else if (
+//       window.scrollY >= sectionHeadings[0].offsetTop &&
+//       window.scrollY < sectionHeadings[1].offsetTop
+//     ) {
+//       navHref[1].classList.add("red");
+//     } else if (
+//       window.scrollY >= sectionHeadings[1].offsetTop &&
+//       window.scrollY < sectionHeadings[2].offsetTop
+//     ) {
+//       navHref[2].classList.add("red");
+//     } else if (
+//       window.scrollY >= sectionHeadings[2].offsetTop &&
+//       window.scrollY < sectionHeadings[3].offsetTop
+//     ) {
+//       navHref[3].classList.add("red");
+//     } else if (window.scrollY >= sectionHeadings[3].offsetTop) {
+//       navHref[4].classList.add("red");
+//     }
 
-  sectionHeadings.forEach((el, index) => {
-    if (sectionHeadings[index].offsetTop - 200 < window.scrollY) {
-      navHref[index].classList.add("red");
-    }
-    //   })
-
-    // else {nav.forEach(el => el.children[0].classList.remove('red'))}
-    //     console.log(window.scrollY);
+//   });
+// });
+const checkPosition = (event) => {
+  navHref.forEach((el) => {
+    el.classList.remove("red");
   });
+  sectionHeadings.forEach((el, index) => {
+    if (window.scrollY < sectionHeadings[0].offsetTop) {
+      navHref[0].classList.add("red");
+    } else if (
+      window.scrollY >=
+        sectionHeadings[index].offsetTop - window.screen.height / 2 &&
+      window.scrollY <=
+        sectionHeadings[index + 1].offsetTop - window.screen.height / 2
+    ) {
+      navHref[index].classList.add("red");
+      console.log("red");
+    } else if (window.scrollY >= sectionHeadings[4].offsetTop - window.screen.height / 2) {
+      navHref[4].classList.add("red");
+    }
+  });
+}
 
-  //    const header = document.querySelector('.header');
-  //    header.classList.add('red');
-  //    console.log(window.scrollY);
-});
+window.addEventListener('DOMContentLoaded', checkPosition)
+document.addEventListener("scroll", checkPosition);
+
+// const removeRed = () => {
+// const menuRed = document.querySelectorAll(".red");
+
+//   menuRed.forEach((el, index, array) => {
+//     console.log(index, (array.length - 1));
+
+//     if (index !== (array.length - 2)) {
+//       el.classList.remove("red");
+//     }
+//   });}
 
 // function changingClass (el, act) => {}
 
@@ -75,11 +100,7 @@ portfolioButtons.forEach((el) =>
     if (el.innerHTML === "Web Design") {
       console.log(el);
       console.log(typeof portfolioImgs);
-      // console.log(portfolioImgs.indexof(e  l));
-      // portfolioImgs.sort()
-      // (a,b) => indexof(b)-indexof(a))
     }
-    //   console.log(portfolioImgs);
   })
 );
 
@@ -104,4 +125,11 @@ sliderArrows.forEach((el) =>
   })
 );
 
+const func = (event) => {
+  event.target.classList.toggle("screen_off");
+};
 
+const phoneScreen = document.querySelectorAll(".phone__screen");
+phoneScreen.forEach((el) => {
+  el.addEventListener("click", func);
+});
