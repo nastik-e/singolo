@@ -1,4 +1,4 @@
-const portfolioBtns = document.querySelectorAll(".select__buttons");
+const portfolioButtons = document.querySelectorAll(".select__buttons");
 
 const sortingPics = (event) => {
   const portfolioPics = document.querySelectorAll(".images__item");
@@ -11,97 +11,46 @@ const sortingPics = (event) => {
   );
   sortedPics.push(randomPic);
   sortedPics.forEach((el) => portfolioPicParent.appendChild(el));
-  //   console.log(sortedPics);
 };
 document.addEventListener("click", (event) => {
-  if (
-    // console.log
-    event.target.classList.contains("select__buttons")
-  ) {
+  if (event.target.classList.contains("select__buttons")) {
     sortingPics(event);
   }
 });
 
-const navHref = document.querySelectorAll(".nav__menu__item > a");
-const sectionHeadings = document.querySelectorAll(".intro__heading");
-// sectionHeadings.forEach((el) => console.log(el.offsetTop))
+const navHref = [...document.querySelectorAll(".nav__menu__item > a")];
+const sectionHeadings = [...document.querySelectorAll(".intro__heading")];
 
-// document.addEventListener("scroll", (event) => {
-//   navHref.forEach((el) => {
-//     el.classList.remove("red");
-//     if (window.scrollY < sectionHeadings[0].offsetTop) {
-//       navHref[0].classList.add("red");
-//     } else if (
-//       window.scrollY >= sectionHeadings[0].offsetTop &&
-//       window.scrollY < sectionHeadings[1].offsetTop
-//     ) {
-//       navHref[1].classList.add("red");
-//     } else if (
-//       window.scrollY >= sectionHeadings[1].offsetTop &&
-//       window.scrollY < sectionHeadings[2].offsetTop
-//     ) {
-//       navHref[2].classList.add("red");
-//     } else if (
-//       window.scrollY >= sectionHeadings[2].offsetTop &&
-//       window.scrollY < sectionHeadings[3].offsetTop
-//     ) {
-//       navHref[3].classList.add("red");
-//     } else if (window.scrollY >= sectionHeadings[3].offsetTop) {
-//       navHref[4].classList.add("red");
-//     }
-
-//   });
-// });
 const checkPosition = (event) => {
+  const currentPosition = window.scrollY;
+  const offsetHeight = window.screen.height / 2;
   navHref.forEach((el) => {
     el.classList.remove("red");
   });
-  sectionHeadings.forEach((el, index) => {
-    if (window.scrollY < sectionHeadings[0].offsetTop) {
-      navHref[0].classList.add("red");
-    } else if (
-      window.scrollY >=
-        sectionHeadings[index].offsetTop - window.screen.height / 2 &&
-      window.scrollY <=
-        sectionHeadings[index + 1].offsetTop - window.screen.height / 2
+
+  sectionHeadings.forEach((el, index, array) => {
+    if (
+      array[index].offsetTop - offsetHeight < currentPosition &&
+      array[index + 1]?.offsetTop - offsetHeight >= currentPosition
     ) {
       navHref[index].classList.add("red");
-      console.log("red");
-    } else if (window.scrollY >= sectionHeadings[4].offsetTop - window.screen.height / 2) {
-      navHref[4].classList.add("red");
+    } else if (array.at(-1).offsetTop - offsetHeight <= currentPosition) {
+      navHref.at(-1).classList.add("red");
     }
   });
-}
+};
 
-window.addEventListener('DOMContentLoaded', checkPosition)
 document.addEventListener("scroll", checkPosition);
 
-// const removeRed = () => {
-// const menuRed = document.querySelectorAll(".red");
+const changeColorButton = (event) => {
+  portfolioButtons.forEach((el) =>
+    el.classList.remove("select__buttons__active")
+  );
+  event.target.classList.add("select__buttons__active");
+};
 
-//   menuRed.forEach((el, index, array) => {
-//     console.log(index, (array.length - 1));
-
-//     if (index !== (array.length - 2)) {
-//       el.classList.remove("red");
-//     }
-//   });}
-
-// function changingClass (el, act) => {}
-
-const portfolioButtons = document.querySelectorAll(".select__buttons");
-const portfolioImgs = document.querySelectorAll(".images__item");
-portfolioButtons.forEach((el) =>
-  el.addEventListener("click", () => {
-    portfolioButtons.forEach((el) =>
-      el.classList.remove("select__buttons__active")
-    );
-    el.classList.add("select__buttons__active");
-    if (el.innerHTML === "Web Design") {
-      console.log(el);
-      console.log(typeof portfolioImgs);
-    }
-  })
+portfolioButtons.forEach((button) =>
+  button.addEventListener("click", changeColorButton)
 );
 
 const sliderBg = document.querySelector(".slider");
@@ -109,21 +58,20 @@ const sliderPhone = document.querySelector(".slider__phone");
 const sliderHidden = document.querySelector(".slider__hidden");
 const sliderArrows = document.querySelectorAll(".slider__arrow");
 let isRed = true;
-sliderArrows.forEach((el) =>
-  el.addEventListener("click", () => {
-    if (isRed === true) {
-      sliderPhone.classList.add("hidden");
-      sliderHidden.classList.remove("hidden");
-      sliderBg.classList.replace("red", "blue");
-      isRed = false;
-    } else {
-      sliderPhone.classList.remove("hidden");
-      sliderHidden.classList.add("hidden");
-      sliderBg.classList.replace("blue", "red");
-      isRed = true;
-    }
-  })
-);
+const changeImageSlider = (event) => {
+  if (isRed === true) {
+    sliderPhone.classList.add("hidden");
+    sliderHidden.classList.remove("hidden");
+    sliderBg.classList.replace("red", "blue");
+    isRed = false;
+  } else {
+    sliderPhone.classList.remove("hidden");
+    sliderHidden.classList.add("hidden");
+    sliderBg.classList.replace("blue", "red");
+    isRed = true;
+  }
+};
+sliderArrows.forEach((el) => el.addEventListener("click", changeImageSlider));
 
 const func = (event) => {
   event.target.classList.toggle("screen_off");
