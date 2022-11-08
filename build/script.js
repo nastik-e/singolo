@@ -73,11 +73,52 @@ const changeImageSlider = (event) => {
 };
 sliderArrows.forEach((el) => el.addEventListener("click", changeImageSlider));
 
-const func = (event) => {
+const turnoffScreen = (event) => {
   event.target.classList.toggle("screen_off");
 };
 
 const phoneScreen = document.querySelectorAll(".phone__screen");
 phoneScreen.forEach((el) => {
-  el.addEventListener("click", func);
+  el.addEventListener("click", turnoffScreen);
 });
+
+const contentForm = document.forms["content__form"];
+let isValid = true;
+
+const needsValidation = ({ target }) => {
+  if (target.hasAttribute("data-reg")) {
+    const inputValue = target.value;
+    const inputReg = new RegExp(target.getAttribute("data-reg"));
+    const correctInputValue = inputReg.test(inputValue);
+    if (correctInputValue) {
+      removeErrorMessage();
+      isValid = true;
+    } else {
+      showErrorMessage(target);
+      isValid = false;
+    }
+  }
+};
+
+const errorMessages = document.querySelectorAll(".errors__text");
+const submitFormButton = document.getElementById("results__button");
+const removeErrorMessage = () => {
+  errorMessages.forEach((message) => {
+    message.classList.add("hidden");
+  });
+};
+const showErrorMessage = (target) => {
+  const curId = target.getAttribute("id");
+  errorMessages.forEach((message) => {
+    if (message.classList.contains(curId)) {
+      message.classList.remove("hidden");
+    }
+  });
+};
+contentForm.addEventListener("input", needsValidation);
+
+const isValidForm = (event) => {
+  !isValid && event.preventDefault();
+};
+submitFormButton.addEventListener("click", isValidForm);
+

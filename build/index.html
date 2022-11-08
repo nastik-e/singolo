@@ -22,7 +22,9 @@
           >
           <nav class="nav">
             <ul class="nav__menu">
-              <li class="nav__menu__item"><a href="#home" class="red">HOME</a></li>
+              <li class="nav__menu__item">
+                <a href="#home" class="red">HOME</a>
+              </li>
               <li class="nav__menu__item"><a href="#services">SERVICES</a></li>
               <li class="nav__menu__item">
                 <a href="#portfolio">PORTFOLIO</a>
@@ -291,31 +293,56 @@
             </div>
           </div>
           <div class="quote__content">
-            <form class="content__form" action="" method="get">
+            <form
+              class="content__form"
+              id="content__form"
+              name="content__form"
+              action=""
+              method="get"
+            >
               <input
                 class="form__item form__name"
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Name (Required)"
+                data-reg="^[a-zA-Z]{1,20}$"
               />
+
               <input
                 class="form__item form__email"
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Email (Required)"
+                data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
               />
               <input
                 class="form__item form__subject"
                 type="text"
                 name="subject"
+                id="subject"
                 placeholder="Subject"
               />
               <textarea
                 name="subject"
                 class="form__item form__text"
                 name="text"
+                id="text"
+                required
                 placeholder="Describe your project in detail..."
               ></textarea>
+              <div class="form__results">
+                <button type="submit" class="results__button" id="results__button">
+                  Send
+                </button>
+                <div class="results__errors">
+                  <div class="name errors__text hidden">
+                    Your name must be up to 20 English letters
+                  </div>
+                  <div class="email errors__text hidden">Invalid e-mail format</div>
+                </div>
+              </div>
             </form>
             <div class="content__inf">
               <div class="inf__heading">Contact Information</div>
