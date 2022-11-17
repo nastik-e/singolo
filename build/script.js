@@ -12,11 +12,19 @@ const sortingPics = (event) => {
   sortedPics.push(randomPic);
   sortedPics.forEach((el) => portfolioPicParent.appendChild(el));
 };
-document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("select__buttons")) {
-    sortingPics(event);
+
+portfolioButtons.forEach((el) => el.addEventListener("click", sortingPics));
+
+const portfolioPics = document.querySelectorAll(".images__item");
+const addPicBorder = (event) => {
+  if (event.target.classList.contains("clicked")) {
+    event.target.classList.toggle("clicked");
+  } else {
+    portfolioPics.forEach((pic) => pic.classList.remove("clicked"));
+    event.target.classList.add("clicked");
   }
-});
+};
+portfolioPics.forEach((pic) => pic.addEventListener("click", addPicBorder));
 
 const navHref = [...document.querySelectorAll(".nav__menu__item > a")];
 const sectionHeadings = [...document.querySelectorAll(".intro__heading")];
@@ -85,6 +93,16 @@ phoneScreen.forEach((el) => {
 const contentForm = document.forms["content__form"];
 let isValid = true;
 
+// const isEmptyForm = function () {
+//   console.log('formInfo');
+//   if (formInfo.forEach((el) => el === "")) {
+//     return false;
+//   } else {
+
+//     return true;
+//   }
+// };
+
 const needsValidation = ({ target }) => {
   if (target.hasAttribute("data-reg")) {
     const inputValue = target.value;
@@ -117,8 +135,34 @@ const showErrorMessage = (target) => {
 };
 contentForm.addEventListener("input", needsValidation);
 
-const isValidForm = (event) => {
-  !isValid && event.preventDefault();
-};
-submitFormButton.addEventListener("click", isValidForm);
+const submitForm = (event) => {
+  const formInfo = [...document.querySelectorAll(".form__item")].map(
+    (el) => el.value
+  );
 
+  if (!isValid) {
+    console.log("prevent");
+    console.log(isValid);
+    event.preventDefault();
+  } else {
+    contentForm.submit = null;
+    // event.preventDefault();
+    submitFormButton.classList.remove("unactive");
+
+    const modal = document.querySelector(".modal");
+    modal.classList.remove("hidden");
+    const closeModal = document.querySelector(".close");
+    const modalInfo = [...document.querySelectorAll(".item__content")];
+    modalInfo.forEach((el) => (el.innerHTML = formInfo[modalInfo.indexOf(el)]));
+    contentForm.reset();
+    closeModal.addEventListener("click", function () {
+      modal.classList.add("hidden");
+    });
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.classList.add("hidden");
+      } else return;
+    });
+  }
+};
+submitFormButton.addEventListener("click", submitForm);

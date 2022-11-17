@@ -305,6 +305,7 @@
                 type="text"
                 name="name"
                 id="name"
+                required
                 placeholder="Name (Required)"
                 data-reg="^[a-zA-Z]{1,20}$"
               />
@@ -322,25 +323,35 @@
                 type="text"
                 name="subject"
                 id="subject"
+                
                 placeholder="Subject"
               />
               <textarea
-                name="subject"
                 class="form__item form__text"
                 name="text"
                 id="text"
-                required
                 placeholder="Describe your project in detail..."
+                required
+
               ></textarea>
               <div class="form__results">
-                <button type="submit" class="results__button" id="results__button">
+                <button
+                  type="submit"
+                  class="results__button unactive"
+                  id="results__button"
+                >
                   Send
                 </button>
                 <div class="results__errors">
                   <div class="name errors__text hidden">
                     Your name must be up to 20 English letters
                   </div>
-                  <div class="email errors__text hidden">Invalid e-mail format</div>
+                  <div class="email errors__text hidden">
+                    Invalid e-mail format
+                  </div>
+                  <div class="empty errors__text hidden">
+                    Complete the empty fields
+                  </div>
                 </div>
               </div>
             </form>
@@ -412,8 +423,37 @@
           ></a>
         </div>
       </footer>
+      <div class="modal hidden">
+        <div class="modal__window">
+          <img
+            src="../src/img/close.svg"
+            class="close"
+            alt="Close"
+          />
+          <h2 class="window__title">Your form:</h2>
+          <div class="window__body">
+            <div class="body__item">
+              <div class="item__title">Name:</div>
+              <div class="item__content" id="item__name"></div>
+            </div>
+            <div class="body__item">
+              <div class="item__title">Email:</div>
+              <div class="item__content" id="item__email"></div>
+            </div>
+            <div class="body__item">
+              <div class="item__title">Subject:</div>
+              <div class="item__content" id="item__subject"></div>
+            </div>
+            <div class="body__item">
+              <div class="item__title">Description:</div>
+              <div class="item__content" id="item__message"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End of container -->
+
     <script src="script.js"></script>
   </body>
 </html>

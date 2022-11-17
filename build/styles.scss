@@ -65,7 +65,7 @@ body {
     margin: 0 auto;
     .header {
       position: fixed;
-      z-index: 10;
+      z-index: 1;
       width: $container-width;
       height: $header-height;
       background-color: $dark-grey;
@@ -194,9 +194,9 @@ body {
               @extend %screen-off;
             }
           }
-          .hidden {
-            display: none;
-          }
+          // .hidden {
+          //   display: none;
+          // }
         }
         .slider__hidden {
           height: 100%;
@@ -374,6 +374,9 @@ body {
           .image__wall {
             background-image: url(../src/img/portfolio/wall.svg);
           }
+          .clicked {
+            border: 2px solid $background-white;
+          }
         }
       }
       .about {
@@ -484,7 +487,10 @@ body {
                   background-color: #ffeae9;
                   color: $dark-grey;
                   border: 2px solid $dark-grey;
-                } 
+                }
+              }
+              .unactive {
+                opacity: 0.5;
               }
               .results__errors {
                 margin: auto 0px auto 15px;
@@ -492,9 +498,9 @@ body {
                 .errors__text {
                   font-size: 12px;
                 }
-                .hidden {
-                  display: none;
-                }
+                // .hidden {
+                //   display: none;
+                // }
               }
             }
           }
@@ -563,6 +569,64 @@ body {
           border: 2px solid $background-white;
         }
       }
+    }
+    .modal {
+      position: fixed;
+      z-index: 1;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .modal__window {
+        background-color: #fff;
+        width: 50%;
+        height: 50%;
+        color: black;
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        .close {
+          align-self: flex-end;
+          width: 30px;
+          cursor: pointer;
+        }
+        .window__title {
+          font-size: 36px;
+          font-weight: bold;
+          margin: 15px auto;
+          text-align: center;
+        }
+        .window__body {
+          margin: 20px;
+          height: 500px;
+          align-items: center;
+
+          .body__item {
+            display: flex;
+            .item__title {
+              width: 90px;
+            }
+            .item__content {
+              margin-left: 10px;
+            }
+            #item__message {
+              height: 200px;
+              width: 80%;
+              overflow: scroll;
+
+            }
+          }
+        }
+      }
+    }
+    .hidden {
+      display: none;
     }
   } // end of container
 } // end of body
