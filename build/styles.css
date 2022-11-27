@@ -1,274 +1,330 @@
-body .container main .slider .slider__phone .phone-horizontal .screen_off, body .container main .slider .slider__phone .phone-vertical > .screen_off {
+body .main .slider__bg .slider .slider__phone .phone-horizontal .screen_off, body .main .slider__bg .slider .slider__phone .phone-vertical .screen_off {
   background: #2d303a !important;
 }
 
-body .container main .quote .quote__intro, body .container main .about .about__intro, body .container main .portfolio .portfolio__intro, body .container main .services .services__intro {
+body .main .quote__bg .quote .quote__intro, body .main .about__bg .about .about__intro, body .main .portfolio__bg .portfolio .portfolio__intro, body .main .services__bg .services .services__intro {
   margin: 19px 0 12px;
 }
-body .container main .quote .quote__intro .intro__heading, body .container main .about .about__intro .intro__heading, body .container main .portfolio .portfolio__intro .intro__heading, body .container main .services .services__intro .intro__heading {
+body .main .quote__bg .quote .quote__intro .intro__heading, body .main .about__bg .about .about__intro .intro__heading, body .main .portfolio__bg .portfolio .portfolio__intro .intro__heading, body .main .services__bg .services .services__intro .intro__heading {
   font-size: 30px;
   margin: 0px;
 }
-body .container main .quote .quote__intro .intro__text, body .container main .about .about__intro .intro__text, body .container main .portfolio .portfolio__intro .intro__text, body .container main .services .services__intro .intro__text {
+body .main .quote__bg .quote .quote__intro .intro__text, body .main .about__bg .about .about__intro .intro__text, body .main .portfolio__bg .portfolio .portfolio__intro .intro__text, body .main .services__bg .services .services__intro .intro__text {
   font-size: 18px;
   line-height: 30px;
   margin-top: 14px;
   margin-bottom: 0px;
 }
 
-body .container main .services .service__list .list__item .item__pic, body .container .footer .footer__contacts .contacts__item, body .container main .about .about__team .team__member .member__contacts .contacts__item {
+body .main .services__bg .services .service__list .list__item .item__pic, body .footer .footer__container .footer__contacts .contacts__item, body .main .about__bg .about .about__team .team__member .member__contacts .contacts__item {
   border: 2px solid #666d89;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-body .container .footer .footer__contacts, body .container main .about .about__team .team__member .member__contacts {
+body .footer .footer__container .footer__contacts, body .main .about__bg .about .about__team .team__member .member__contacts {
   display: flex;
   flex-direction: row;
 }
-body .container .footer .footer__contacts .contacts__item, body .container main .about .about__team .team__member .member__contacts .contacts__item {
+body .footer .footer__container .footer__contacts .contacts__item, body .main .about__bg .about .about__team .team__member .member__contacts .contacts__item {
   height: 27px;
   width: 27px;
   margin-right: 10px;
 }
-body .container .footer .footer__contacts .item__facebook, body .container main .about .about__team .team__member .member__contacts .item__facebook {
+body .footer .footer__container .footer__contacts .item__facebook, body .main .about__bg .about .about__team .team__member .member__contacts .item__facebook {
   background-image: url(../src/about-us/facebook.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-body .container .footer .footer__contacts .item__google, body .container main .about .about__team .team__member .member__contacts .item__google {
+body .footer .footer__container .footer__contacts .item__google, body .main .about__bg .about .about__team .team__member .member__contacts .item__google {
   background-image: url(../src/about-us/google+.svg);
 }
-body .container .footer .footer__contacts .item__twitter, body .container main .about .about__team .team__member .member__contacts .item__twitter {
+body .footer .footer__container .footer__contacts .item__twitter, body .main .about__bg .about .about__team .team__member .member__contacts .item__twitter {
   background-image: url(../src/about-us/twitter.svg);
 }
-body .container .footer .footer__contacts .item__linkedin, body .container main .about .about__team .team__member .member__contacts .item__linkedin {
+body .footer .footer__container .footer__contacts .item__linkedin, body .main .about__bg .about .about__team .team__member .member__contacts .item__linkedin {
   background-image: url(../src/about-us/linkedin.svg);
 }
 
 body {
   font-family: "Lato", sans-serif;
   margin: 0px;
-  display: flex;
   color: #666d89;
 }
-body .container {
-  width: 1024px;
-  margin: 0 auto;
-}
-body .container .header {
+body .header {
   position: fixed;
-  z-index: 1;
-  width: 1024px;
+  z-index: 2;
+  width: 100%;
   height: 89px;
   background-color: #2d303a;
+  top: 0px;
+}
+body .header .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 6px solid #323645;
+  max-width: 1024px;
+  height: 100%;
+  margin: auto;
 }
-body .container .header .logo {
+body .header .header__container .logo {
   text-decoration: none;
   padding: 0 41px;
-}
-body .container .header .logo .logo__text {
-  width: 19%;
   justify-self: flex-start;
+}
+body .header .header__container .logo .logo__text {
+  width: 19%;
   font-size: 25px;
   color: #fff;
   line-height: 6.23px;
   font-weight: bold;
 }
-body .container .header .logo .logo__text .logo__star_red {
+body .header .header__container .logo .logo__text .logo__star_red {
   color: #f06c64;
 }
-body .container .header .nav {
-  width: 40%;
+body .header .header__container .nav {
+  width: 410px;
   justify-self: flex-end;
   margin-top: 12px;
   margin-right: 23px;
 }
-body .container .header .nav .nav__menu {
+body .header .header__container .nav .nav__menu {
   display: flex;
   justify-content: space-around;
   padding: 0px;
 }
-body .container .header .nav .nav__menu .nav__menu__item {
+body .header .header__container .nav .nav__menu .nav__menu__item {
   list-style-type: none;
   font-size: 12px;
   line-height: 6.23px;
   font-weight: bold;
   color: #fff;
 }
-body .container .header .nav .nav__menu .nav__menu__item a {
+body .header .header__container .nav .nav__menu .nav__menu__item a {
   text-decoration: none;
   color: #f1f1f1;
 }
-body .container .header .nav .nav__menu .nav__menu__item a:hover {
+body .header .header__container .nav .nav__menu .nav__menu__item a:hover {
   color: #f06c64;
 }
-body .container .header .nav .nav__menu .nav__menu__item a.red {
+body .header .header__container .nav .nav__menu .nav__menu__item a.red {
   color: #f06c64;
 }
-body .container main .slider {
-  height: 588px;
-  margin-top: 95px;
+@media screen and (max-width: 767px) {
+  body .header .nav {
+    display: none;
+  }
+  body .header .header__container {
+    justify-content: center;
+  }
+  body .header .header__container .logo .logo__text {
+    font-size: 36px;
+  }
+}
+body .main {
+  width: 100%;
+}
+body .main .slider__bg {
+  background-color: #f06c64;
+  width: 100%;
+}
+body .main .slider__bg .slider {
+  max-width: 1024px;
+  min-height: 600px;
+  margin: 0 auto;
+  margin-top: 89px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-body .container main .slider__arrow {
+body .main .slider__bg .slider__arrow {
   align-self: stretch;
-  width: 130px;
+  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .container main .slider__arrow:hover {
+body .main .slider__bg .slider__arrow .arrow__symbol {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  opacity: 30%;
+}
+body .main .slider__bg .slider__arrow:hover {
   background-color: rgba(32, 31, 31, 0.1333333333);
   cursor: pointer;
 }
-body .container main .slider .slider__arrow__left {
+body .main .slider__bg .slider .slider__arrow__left {
   justify-self: flex-start;
   margin-right: 20px;
 }
-body .container main .slider .slider__phone {
+body .main .slider__bg .slider .slider__phone {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-body .container main .slider .slider__phone .phone-vertical {
+body .main .slider__bg .slider .slider__phone .phone-vertical {
+  width: 14vw;
+  height: 29.7vw;
+  max-width: 200px;
+  max-height: 427px;
   background-image: url(../src/img/phone__corpus.png);
-  width: 215px;
-  height: 458px;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 22px 22px 5px #ce5d56;
-  position: relative;
-}
-body .container main .slider .slider__phone .phone-vertical .phone-vertical__screen {
-  background-image: url(../src/img/phone__screen_v.png);
-  width: 192px;
-  height: 332px;
-  background-color: #dbdc7e;
-  margin-top: 65px;
-  margin-left: 10px;
-}
-body .container main .slider .slider__phone .phone-horizontal {
-  background-image: url(../src/img/phone__corpus_h.png);
-  background-color: white;
-  width: 458px;
-  height: 215px;
-  border-radius: 25px;
-  box-shadow: 22px 22px 5px #ce5d56;
-  position: relative;
-}
-body .container main .slider .slider__phone .phone-horizontal .phone-horizontal__screen {
-  background-image: url(../src/img/phone__screen_h.png);
-  width: 335px;
-  height: 190px;
-  background-color: #81cfd9;
-  margin-top: 12px;
-  margin-left: 58px;
-}
-body .container main .slider .slider__hidden {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 588px;
-  background-color: #648bf0;
-  border-bottom: 6px solid #81a0f0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  box-shadow: 22px 22px 5px rgba(22, 10, 9, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .container main .slider .slider__hidden img {
-  height: 500px;
-  width: 500px;
+body .main .slider__bg .slider .slider__phone .phone-vertical .phone-vertical__screen {
+  width: 88%;
+  height: 73%;
+  margin-top: 4px;
+  background-image: url(../src/img/phone__screen_v.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-height: 310px;
 }
-body .container main .slider .hidden {
+body .main .slider__bg .slider .slider__phone .phone-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../src/img/phone__corpus_h.png);
+  background-size: contain;
+  width: 40vw;
+  height: 18.8vw;
+  border-radius: 5%;
+  max-width: 456px;
+  max-height: 215px;
+  box-shadow: 22px 22px 5px rgba(22, 10, 9, 0.2);
+}
+body .main .slider__bg .slider .slider__phone .phone-horizontal .phone-horizontal__screen {
+  background-image: url(../src/img/phone__screen_h.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 73%;
+  height: 88%;
+  background-color: #81cfd9;
+  margin-right: 3px;
+}
+@media screen and (max-width: 767px) {
+  body .main .slider__bg .slider .slider__phone {
+    flex-direction: column;
+  }
+  body .main .slider__bg .slider .slider__phone .phone-horizontal {
+    margin-top: 50px;
+  }
+}
+body .main .slider__bg .slider .slider__blue {
   display: none;
 }
-body .container main .slider .slider__arrow__right {
+body .main .slider__bg .slider .slider__arrow__right {
   justify-self: flex-end;
   margin-left: 42px;
 }
-body .container main .red {
-  background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
-  border-top: 6px solid #f06c64;
-}
-body .container main .blue {
+body .main .blue {
   background-color: #648bf0;
-  border-bottom: 6px solid #648bf0;
-  border-top: 6px solid #648bf0;
 }
-body .container main .services {
-  height: 420px;
+body .main .blue .slider .slider__phone {
+  display: none;
+}
+body .main .blue .slider .slider__blue {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+body .main .blue .slider .slider__blue img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  max-width: 500px;
+}
+body .main .services__bg {
+  width: 100%;
   background-color: #f1f1f1;
+}
+body .main .services__bg .services {
+  max-width: 1024px;
+  min-height: 420px;
+  margin: 0 auto;
   padding: 4%;
 }
-body .container main .services .service__list {
+body .main .services__bg .services .service__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3 1fr);
   grid-row-gap: 5px;
   grid-column-gap: 15px;
   margin-top: 50px;
 }
-body .container main .services .service__list .list__item {
+@media screen and (min-width: 821px) {
+  body .main .services__bg .services .service__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3 1fr);
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 820px) {
+  body .main .services__bg .services .service__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6 1fr);
+  }
+}
+@media screen and (max-width: 414px) {
+  body .main .services__bg .services .service__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12 1fr);
+  }
+}
+body .main .services__bg .services .service__list .list__item {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
 }
-body .container main .services .service__list .list__item .item__pic {
+body .main .services__bg .services .service__list .list__item .item__pic {
   height: 55px;
-  width: 125px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body .container main .services .service__list .list__item .pic__pen {
-  background-image: url(../src/img/pen.png);
+body .main .services__bg .services .service__list .list__item .item__pic img {
+  max-width: 50px;
+  max-height: 50px;
 }
-body .container main .services .service__list .list__item .pic__bulb {
-  background-image: url(../src/img/bulb.png);
-}
-body .container main .services .service__list .list__item .pic__heart {
-  background-image: url(../src/img/heart.png);
-}
-body .container main .services .service__list .list__item .pic__phone {
-  background-image: url(../src/img/phone.png);
-}
-body .container main .services .service__list .list__item .pic__bubble {
-  background-image: url(../src/img/bubble.png);
-}
-body .container main .services .service__list .list__item .pic__star {
-  background-image: url(../src/img/star.png);
-}
-body .container main .services .service__list .list__item .item__description {
+body .main .services__bg .services .service__list .list__item .item__description {
   margin-left: 25px;
+  width: 75%;
 }
-body .container main .services .service__list .list__item .item__description .description__title {
+body .main .services__bg .services .service__list .list__item .item__description .description__title {
   font-size: 18px;
   line-height: 18px;
   font-weight: 900;
 }
-body .container main .services .service__list .list__item .item__description .description__text {
+body .main .services__bg .services .service__list .list__item .item__description .description__text {
   font-size: 12px;
   line-height: 22px;
 }
-body .container main .portfolio {
-  padding: 4%;
-  height: 785px;
+body .main .portfolio__bg {
+  width: 100%;
   background-color: #2d303a;
 }
-body .container main .portfolio .portfolio__select {
+body .main .portfolio__bg .portfolio {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4%;
+  min-height: 785px;
+  display: flex;
+  flex-direction: column;
+}
+body .main .portfolio__bg .portfolio .portfolio__select {
   margin-bottom: 20px;
 }
-body .container main .portfolio .portfolio__select .select__buttons {
+body .main .portfolio__bg .portfolio .portfolio__select .select__buttons {
   border: 1px solid #666d89;
   background-color: transparent;
   border-radius: 4px;
@@ -283,124 +339,167 @@ body .container main .portfolio .portfolio__select .select__buttons {
   text-align: center;
   vertical-align: middle;
 }
-body .container main .portfolio .portfolio__select .select__buttons:hover {
+body .main .portfolio__bg .portfolio .portfolio__select .select__buttons:hover {
   cursor: pointer;
 }
-body .container main .portfolio .portfolio__select .select__buttons__active {
+body .main .portfolio__bg .portfolio .portfolio__select .select__buttons__active {
   color: #f1f1f1;
   border: 1px solid #f1f1f1;
 }
-body .container main .portfolio .portfolio__images {
+body .main .portfolio__bg .portfolio .portfolio__images {
+  align-self: center;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
-body .container main .portfolio .portfolio__images .images__item {
+@media screen and (min-width: 846px) {
+  body .main .portfolio__bg .portfolio .portfolio__images {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body .main .portfolio__bg .portfolio .portfolio__images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 767px) {
+  body .main .portfolio__bg .portfolio .portfolio__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  body .main .portfolio__bg .portfolio .portfolio__images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+body .main .portfolio__bg .portfolio .portfolio__images .images__item {
   width: 220px;
   height: 187px;
+  background-size: contain;
 }
-body .container main .portfolio .portfolio__images .image__ship {
+body .main .portfolio__bg .portfolio .portfolio__images .image__ship {
   background-image: url(../src/img/portfolio/ship.svg);
 }
-body .container main .portfolio .portfolio__images .image__girl {
+body .main .portfolio__bg .portfolio .portfolio__images .image__girl {
   background-image: url(../src/img/portfolio/girl.svg);
 }
-body .container main .portfolio .portfolio__images .image__city {
+body .main .portfolio__bg .portfolio .portfolio__images .image__city {
   background-image: url(../src/img/portfolio/city.svg);
 }
-body .container main .portfolio .portfolio__images .image__robot {
+body .main .portfolio__bg .portfolio .portfolio__images .image__robot {
   background-image: url(../src/img/portfolio/robot.svg);
 }
-body .container main .portfolio .portfolio__images .image__monsters {
+body .main .portfolio__bg .portfolio .portfolio__images .image__monsters {
   background-image: url(../src/img/portfolio/monsters.svg);
 }
-body .container main .portfolio .portfolio__images .image__pile {
+body .main .portfolio__bg .portfolio .portfolio__images .image__pile {
   background-image: url(../src/img/portfolio/pile.svg);
 }
-body .container main .portfolio .portfolio__images .image__robots {
+body .main .portfolio__bg .portfolio .portfolio__images .image__robots {
   background-image: url(../src/img/portfolio/robots.svg);
 }
-body .container main .portfolio .portfolio__images .image__birds {
+body .main .portfolio__bg .portfolio .portfolio__images .image__birds {
   background-image: url(../src/img/portfolio/birds.svg);
 }
-body .container main .portfolio .portfolio__images .image__city-monster {
+body .main .portfolio__bg .portfolio .portfolio__images .image__city-monster {
   background-image: url(../src/img/portfolio/city\ monster.svg);
 }
-body .container main .portfolio .portfolio__images .image__tape {
+body .main .portfolio__bg .portfolio .portfolio__images .image__tape {
   background-image: url(../src/img/portfolio/tape.svg);
 }
-body .container main .portfolio .portfolio__images .image__bloody-monster {
+body .main .portfolio__bg .portfolio .portfolio__images .image__bloody-monster {
   background-image: url(../src/img/portfolio/bloody\ monster.svg);
 }
-body .container main .portfolio .portfolio__images .image__wall {
+body .main .portfolio__bg .portfolio .portfolio__images .image__wall {
   background-image: url(../src/img/portfolio/wall.svg);
 }
-body .container main .portfolio .portfolio__images .clicked {
+body .main .portfolio__bg .portfolio .portfolio__images .clicked {
   border: 2px solid #f1f1f1;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
 }
-body .container main .about {
-  padding: 4%;
+body .main .about__bg {
+  width: 100%;
   background-color: #f1f1f1;
-  height: 653px;
 }
-body .container main .about .about__team {
+body .main .about__bg .about {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4%;
+  min-height: 653px;
+}
+body .main .about__bg .about .about__team {
   margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
 }
-body .container main .about .about__team .team__member .member__pic {
+body .main .about__bg .about .about__team .team__member .member__pic {
   height: 300px;
   width: 300px;
 }
-body .container main .about .about__team .team__member .pic__1 {
+body .main .about__bg .about .about__team .team__member .pic__1 {
   background-image: url(../src/about-us/Adam\ Jensen.svg);
 }
-body .container main .about .about__team .team__member .pic__2 {
+body .main .about__bg .about .about__team .team__member .pic__2 {
   background-image: url(../src/about-us/Desmond\ Miles.svg);
 }
-body .container main .about .about__team .team__member .pic__3 {
+body .main .about__bg .about .about__team .team__member .pic__3 {
   background-image: url(../src/about-us/Scolara\ Visari.svg);
 }
-body .container main .about .about__team .team__member .member__info {
+body .main .about__bg .about .about__team .team__member .member__info {
   margin-top: 20px;
 }
-body .container main .about .about__team .team__member .member__info .info__heading {
+body .main .about__bg .about .about__team .team__member .member__info .info__heading {
   font-weight: 900;
   font-size: 18px;
   line-height: 18px;
 }
-body .container main .about .about__team .team__member .member__info .info__text {
+body .main .about__bg .about .about__team .team__member .member__info .info__text {
   margin-top: 5px;
   font-size: 12px;
   line-height: 22px;
   font-weight: 400;
 }
-body .container main .about .about__team .team__member .member__contacts {
+body .main .about__bg .about .about__team .team__member .member__contacts {
   margin-top: 25px;
 }
-body .container main .about .about__team .team__member .member__contacts .contacts__item:hover {
+body .main .about__bg .about .about__team .team__member .member__contacts .contacts__item:hover {
   margin-top: 7px;
 }
-body .container main .quote {
-  height: 570px;
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  body .main .about__bg .about .about__team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  body .main .about__bg .about .about__team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+body .main .quote__bg {
+  width: 100%;
   background-color: #f06c64;
+}
+body .main .quote__bg .quote {
+  max-width: 1024px;
+  margin: 0 auto;
+  min-height: 570px;
   padding: 4%;
 }
-body .container main .quote .quote__intro {
+body .main .quote__bg .quote .quote__intro {
   color: #f1f1f1;
 }
-body .container main .quote .quote__content {
+body .main .quote__bg .quote .quote__content {
   margin-top: 45px;
   display: flex;
   flex-direction: row;
   color: #f1f1f1;
 }
-body .container main .quote .quote__content .content__form {
+body .main .quote__bg .quote .quote__content .content__form {
   width: 65%;
 }
-body .container main .quote .quote__content .content__form .form__item {
+body .main .quote__bg .quote .quote__content .content__form .form__item {
   width: 100%;
   height: 35px;
   background-color: #d6564f;
@@ -409,39 +508,39 @@ body .container main .quote .quote__content .content__form .form__item {
   margin-top: 15px;
   padding-left: 2%;
 }
-body .container main .quote .quote__content .content__form :first-child {
+body .main .quote__bg .quote .quote__content .content__form :first-child {
   margin-top: 0px;
 }
-body .container main .quote .quote__content .content__form ::-moz-placeholder {
+body .main .quote__bg .quote .quote__content .content__form ::-moz-placeholder {
   color: white;
   opacity: 40%;
   font-size: 12px;
   line-height: 22px;
   font-family: lato, sans-serif;
 }
-body .container main .quote .quote__content .content__form :-ms-input-placeholder {
+body .main .quote__bg .quote .quote__content .content__form :-ms-input-placeholder {
   color: white;
   opacity: 40%;
   font-size: 12px;
   line-height: 22px;
   font-family: lato, sans-serif;
 }
-body .container main .quote .quote__content .content__form ::placeholder {
+body .main .quote__bg .quote .quote__content .content__form ::placeholder {
   color: white;
   opacity: 40%;
   font-size: 12px;
   line-height: 22px;
   font-family: lato, sans-serif;
 }
-body .container main .quote .quote__content .content__form .form__text {
+body .main .quote__bg .quote .quote__content .content__form .form__text {
   height: 200px;
   resize: none;
 }
-body .container main .quote .quote__content .content__form .form__results {
+body .main .quote__bg .quote .quote__content .content__form .form__results {
   display: flex;
   margin-top: 15px;
 }
-body .container main .quote .quote__content .content__form .form__results .results__button {
+body .main .quote__bg .quote .quote__content .content__form .form__results .results__button {
   width: 120px;
   height: 30px;
   font-size: 16px;
@@ -452,68 +551,73 @@ body .container main .quote .quote__content .content__form .form__results .resul
   border-radius: 5%;
   box-shadow: 2px 2px 2px #d6564f;
 }
-body .container main .quote .quote__content .content__form .form__results .results__button:hover {
+body .main .quote__bg .quote .quote__content .content__form .form__results .results__button:hover {
   background-color: #ffeae9;
   color: #2d303a;
   border: 2px solid #2d303a;
 }
-body .container main .quote .quote__content .content__form .form__results .unactive {
+body .main .quote__bg .quote .quote__content .content__form .form__results .unactive {
   opacity: 0.5;
 }
-body .container main .quote .quote__content .content__form .form__results .results__errors {
+body .main .quote__bg .quote .quote__content .content__form .form__results .results__errors {
   margin: auto 0px auto 15px;
   width: 100%;
 }
-body .container main .quote .quote__content .content__form .form__results .results__errors .errors__text {
+body .main .quote__bg .quote .quote__content .content__form .form__results .results__errors .errors__text {
   font-size: 12px;
 }
-body .container main .quote .quote__content .content__inf {
+body .main .quote__bg .quote .quote__content .content__inf {
   width: 32%;
   margin-left: 27px;
   font-size: 18px;
 }
-body .container main .quote .quote__content .content__inf .inf__heading {
+body .main .quote__bg .quote .quote__content .content__inf .inf__heading {
   margin-top: 0;
   font-weight: bold;
 }
-body .container main .quote .quote__content .content__inf .inf__text {
+body .main .quote__bg .quote .quote__content .content__inf .inf__text {
   overflow-wrap: normal;
   font-size: 12px;
   line-height: 22px;
   margin-top: 8px;
 }
-body .container main .quote .quote__content .content__inf .inf__links {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links {
   margin-top: 22px;
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item {
   display: flex;
   flex-direction: row;
   margin-top: 8px;
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item .item__logo {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item .item__logo {
   height: 16px;
   width: 12px;
   background-repeat: no-repeat;
   background-position: center;
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item .logo__location {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item .logo__location {
   background-image: url(../src/img/location.svg);
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item .logo__phone {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item .logo__phone {
   background-image: url(../src/img/phone-contact.svg);
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item .logo__mail {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item .logo__mail {
   background-image: url(../src/img/mail.svg);
 }
-body .container main .quote .quote__content .content__inf .inf__links .links__item .item__text {
+body .main .quote__bg .quote .quote__content .content__inf .inf__links .links__item .item__text {
   font-size: 12px;
   margin-left: 13px;
   text-decoration: none;
   color: #f1f1f1;
 }
-body .container .footer {
-  padding: 0 4%;
+body .footer {
+  width: 100%;
   background-color: #2d303a;
+}
+body .footer .footer__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 4%;
   height: 78px;
   display: flex;
   justify-content: space-between;
@@ -521,10 +625,10 @@ body .container .footer {
   font-size: 12px;
   line-height: 6px;
 }
-body .container .footer .footer__contacts .contacts__item:hover {
+body .footer .footer__container .footer__contacts .contacts__item:hover {
   border: 2px solid #f1f1f1;
 }
-body .container .modal {
+body .modal {
   position: fixed;
   z-index: 1;
   top: 0px;
@@ -536,7 +640,7 @@ body .container .modal {
   align-items: center;
   justify-content: center;
 }
-body .container .modal .modal__window {
+body .modal .modal__window {
   background-color: #fff;
   width: 50%;
   height: 50%;
@@ -547,36 +651,36 @@ body .container .modal .modal__window {
   justify-content: center;
   align-content: center;
 }
-body .container .modal .modal__window .close {
+body .modal .modal__window .close {
   align-self: flex-end;
   width: 30px;
   cursor: pointer;
 }
-body .container .modal .modal__window .window__title {
+body .modal .modal__window .window__title {
   font-size: 36px;
   font-weight: bold;
   margin: 15px auto;
   text-align: center;
 }
-body .container .modal .modal__window .window__body {
+body .modal .modal__window .window__body {
   margin: 20px;
   height: 500px;
   align-items: center;
 }
-body .container .modal .modal__window .window__body .body__item {
+body .modal .modal__window .window__body .body__item {
   display: flex;
 }
-body .container .modal .modal__window .window__body .body__item .item__title {
+body .modal .modal__window .window__body .body__item .item__title {
   width: 90px;
 }
-body .container .modal .modal__window .window__body .body__item .item__content {
+body .modal .modal__window .window__body .body__item .item__content {
   margin-left: 10px;
 }
-body .container .modal .modal__window .window__body .body__item #item__message {
+body .modal .modal__window .window__body .body__item #item__message {
   height: 200px;
   width: 80%;
   overflow: scroll;
 }
-body .container .hidden {
+body .hidden {
   display: none;
 }/*# sourceMappingURL=styles.css.map */

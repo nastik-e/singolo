@@ -12,61 +12,55 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="header">
-          <a class="logo" href="index.html"
-            ><h1 class="logo__text">
-              SINGOLO<span class="logo__star_red">*</span>
-            </h1></a
-          >
-          <nav class="nav">
-            <ul class="nav__menu">
-              <li class="nav__menu__item">
-                <a href="#home" class="red">HOME</a>
-              </li>
-              <li class="nav__menu__item"><a href="#services">SERVICES</a></li>
-              <li class="nav__menu__item">
-                <a href="#portfolio">PORTFOLIO</a>
-              </li>
-              <li class="nav__menu__item"><a href="#about">ABOUT</a></li>
-              <li class="nav__menu__item"><a href="#contact">CONTACT</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <!-- End of header -->
-      <main>
+    <header class="header">
+      <div class="header__container">
+        <a class="logo" href="index.html"
+          ><h1 class="logo__text">
+            SINGOLO<span class="logo__star_red">*</span>
+          </h1></a
+        >
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li class="nav__menu__item">
+              <a href="#home" class="red">HOME</a>
+            </li>
+            <li class="nav__menu__item"><a href="#services">SERVICES</a></li>
+            <li class="nav__menu__item">
+              <a href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li class="nav__menu__item"><a href="#about">ABOUT</a></li>
+            <li class="nav__menu__item"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End of header -->
+    <main class="main">
+      <div class="slider__bg">
         <section class="slider red" id="home">
           <h2 class="intro__heading"></h2>
           <div class="slider__arrow slider__arrow__left">
-            <img
-              class="arrow__pic arrow-left"
-              src="../src/img/arrow-left.svg"
-              alt="slide here"
-            />
+            <div class="arrow__symbol"><</div>
           </div>
           <div class="slider__phone">
-            <div class="phone-vertical">
+            <div class="phone-vertical phone__body">
               <div class="phone-vertical__screen phone__screen"></div>
             </div>
             <div class="phone-horizontal">
               <div class="phone-horizontal__screen phone__screen"></div>
             </div>
           </div>
-          <div class="slider__hidden hidden">
+          <div class="slider__blue hidden">
             <img src="../src/img/slider.png" alt="slider" />
           </div>
           <div class="slider__arrow slider__arrow__right">
-            <img
-              class="arrow__pic arrow-right"
-              src="../src/img/arrow-right.svg"
-              alt="slide here"
-            />
+            <div class="arrow__symbol">></div>
           </div>
         </section>
+      </div>
 
-        <!-- End of slider -->
+      <!-- End of slider -->
+      <div class="services__bg">
         <section class="services" id="services">
           <div class="services__intro">
             <h2 class="intro__heading">Our Services</h2>
@@ -79,7 +73,9 @@
           </div>
           <div class="service__list">
             <div class="list__item item__custom-design">
-              <div class="item__pic pic__pen"></div>
+              <div class="item__pic">
+                <img src="../src/img/pen.png" alt="Bulb" class="pic__pen" />
+              </div>
               <div class="item__description">
                 <div class="description__title">Custom Design</div>
                 <p class="description__text">
@@ -89,7 +85,9 @@
               </div>
             </div>
             <div class="list__item item__inovative-ideas">
-              <div class="item__pic pic__bulb"></div>
+              <div class="item__pic">
+                <img src="../src/img/bulb.png" alt="Bulb" class="pic__bulb" />
+              </div>
               <div class="item__description">
                 <div class="description__title">Inovative Ideas</div>
                 <p class="description__text">
@@ -99,7 +97,9 @@
               </div>
             </div>
             <div class="list__item item__love-is-the-answer">
-              <div class="item__pic pic__heart"></div>
+              <div class="item__pic">
+                <img src="../src/img/heart.png" alt="Bulb" class="pic__heart" />
+              </div>
               <div class="item__description">
                 <div class="description__title">Love Is The Answer</div>
                 <p class="description__text">
@@ -109,7 +109,9 @@
               </div>
             </div>
             <div class="list__item item__responsive-layout">
-              <div class="item__pic pic__phone"></div>
+              <div class="item__pic">
+                <img src="../src/img/phone.png" alt="Bulb" class="pic__phone" />
+              </div>
               <div class="item__description">
                 <div class="description__title">Responsive Layout</div>
                 <p class="description__text">
@@ -119,7 +121,13 @@
               </div>
             </div>
             <div class="list__item item__24/7support">
-              <div class="item__pic pic__bubble"></div>
+              <div class="item__pic">
+                <img
+                  src="../src/img/bubble.png"
+                  alt="Bulb"
+                  class="pic__bubble"
+                />
+              </div>
               <div class="item__description">
                 <div class="description__title">24 / 7 Support</div>
                 <p class="description__text">
@@ -129,7 +137,9 @@
               </div>
             </div>
             <div class="list__item item__feel-like-a-star">
-              <div class="item__pic pic__star"></div>
+              <div class="item__pic">
+                <img src="../src/img/star.png" alt="Bulb" class="pic__star" />
+              </div>
               <div class="item__description">
                 <div class="description__title">Feel Like A Star</div>
                 <p class="description__text">
@@ -141,7 +151,10 @@
           </div>
           <!-- End of services__list -->
         </section>
-        <!-- End of services -->
+      </div>
+
+      <!-- End of services -->
+      <div class="portfolio__bg">
         <section class="portfolio" id="portfolio">
           <div class="portfolio__intro">
             <h2 class="intro__heading">Portfolio</h2>
@@ -170,8 +183,11 @@
             <div class="images__item image__bloody-monster"></div>
             <div class="images__item image__wall"></div>
           </div>
-          <!-- End of portfolio -->
         </section>
+      </div>
+      <!-- End of portfolio -->
+
+      <div class="about__bg">
         <section class="about" id="about">
           <div class="about__intro">
             <h2 class="intro__heading">About Us</h2>
@@ -281,7 +297,9 @@
             </div>
           </div>
         </section>
-        <!-- End of about -->
+      </div>
+      <!-- End of about -->
+      <div class="quote__bg">
         <section class="quote" id="contact">
           <div class="quote__intro">
             <h2 class="intro__heading">Get a Quote</h2>
@@ -323,7 +341,6 @@
                 type="text"
                 name="subject"
                 id="subject"
-                
                 placeholder="Subject"
               />
               <textarea
@@ -332,7 +349,6 @@
                 id="text"
                 placeholder="Describe your project in detail..."
                 required
-
               ></textarea>
               <div class="form__results">
                 <button
@@ -396,9 +412,11 @@
             </div>
           </div>
         </section>
-        <!-- End of quote -->
-      </main>
-      <footer class="footer">
+      </div>
+      <!-- End of quote -->
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
         <div class="footer__copyright">© Copyright 2022</div>
         <div class="footer__contacts">
           <a
@@ -422,32 +440,28 @@
             class="contacts__item item__linkedin"
           ></a>
         </div>
-      </footer>
-      <div class="modal hidden">
-        <div class="modal__window">
-          <img
-            src="../src/img/close.svg"
-            class="close"
-            alt="Close"
-          />
-          <h2 class="window__title">Your form:</h2>
-          <div class="window__body">
-            <div class="body__item">
-              <div class="item__title">Name:</div>
-              <div class="item__content" id="item__name"></div>
-            </div>
-            <div class="body__item">
-              <div class="item__title">Email:</div>
-              <div class="item__content" id="item__email"></div>
-            </div>
-            <div class="body__item">
-              <div class="item__title">Subject:</div>
-              <div class="item__content" id="item__subject"></div>
-            </div>
-            <div class="body__item">
-              <div class="item__title">Description:</div>
-              <div class="item__content" id="item__message"></div>
-            </div>
+      </div>
+    </footer>
+    <div class="modal hidden">
+      <div class="modal__window">
+        <img src="../src/img/close.svg" class="close" alt="Close" />
+        <h2 class="window__title">Your form:</h2>
+        <div class="window__body">
+          <div class="body__item">
+            <div class="item__title">Name:</div>
+            <div class="item__content" id="item__name"></div>
+          </div>
+          <div class="body__item">
+            <div class="item__title">Email:</div>
+            <div class="item__content" id="item__email"></div>
+          </div>
+          <div class="body__item">
+            <div class="item__title">Subject:</div>
+            <div class="item__content" id="item__subject"></div>
+          </div>
+          <div class="body__item">
+            <div class="item__title">Description:</div>
+            <div class="item__content" id="item__message"></div>
           </div>
         </div>
       </div>

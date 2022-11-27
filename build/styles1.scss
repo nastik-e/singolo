@@ -1,0 +1,21 @@
+$dark-grey: #2d303a;
+$text-grey: #666d89;
+$red: #f06c64;
+$white: #fff;
+$background-white: #f1f1f1;
+body {
+    .header {
+        width: 100%;
+      background-color: $dark-grey;
+      position: fixed;
+      z-index: 1;
+
+        
+    }
+    .container {
+        width: 80%;
+        background-color: rgb(244, 240, 193);
+
+    }
+    width: 100%;
+}

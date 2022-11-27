@@ -61,24 +61,28 @@ portfolioButtons.forEach((button) =>
   button.addEventListener("click", changeColorButton)
 );
 
-const sliderBg = document.querySelector(".slider");
+const sliderBg = document.querySelector(".slider__bg");
 const sliderPhone = document.querySelector(".slider__phone");
 const sliderHidden = document.querySelector(".slider__hidden");
 const sliderArrows = document.querySelectorAll(".slider__arrow");
-let isRed = true;
+// let isRed = true;
+// const changeImageSlider = (event) => {
+//   if (isRed === true) {
+//     sliderPhone.classList.add("hidden");
+//     sliderHidden.classList.remove("hidden");
+//     sliderBg.classList.replace("red", "blue");
+//     isRed = false;
+//   } else {
+//     sliderPhone.classList.remove("hidden");
+//     sliderHidden.classList.add("hidden");
+//     sliderBg.classList.replace("blue", "red");
+//     isRed = true;
+//   }
+// };
+
 const changeImageSlider = (event) => {
-  if (isRed === true) {
-    sliderPhone.classList.add("hidden");
-    sliderHidden.classList.remove("hidden");
-    sliderBg.classList.replace("red", "blue");
-    isRed = false;
-  } else {
-    sliderPhone.classList.remove("hidden");
-    sliderHidden.classList.add("hidden");
-    sliderBg.classList.replace("blue", "red");
-    isRed = true;
-  }
-};
+  sliderBg.classList.toggle('blue');
+}
 sliderArrows.forEach((el) => el.addEventListener("click", changeImageSlider));
 
 const turnoffScreen = (event) => {
