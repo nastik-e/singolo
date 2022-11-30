@@ -233,40 +233,25 @@ body {
             .screen_off {
               @extend %screen-off;
             }
-            // .hidden {
-            //   display: none;
           }
           @media screen and (max-width: 767px) {
             flex-direction: column;
+            .phone-vertical {
+              height: 44.55vw;
+              width: 21vw;
+            }
 
             .phone-horizontal {
               margin-top: 50px;
+              width: 60vw;
+              height: 28.2vw;
             }
           }
         }
 
         .slider__blue {
           display: none;
-          // height: 100%;
-          // display: flex;
-          // justify-content: space-between;
-          // align-items: center;
-          // width: 100%;
-
-          // height: 600px - $bottom-height * 2;
-          // background-color: #648bf0;
-          // border-bottom: $bottom-height solid #81a0f0;
-          // display: flex;
-          // align-items: center;
-          // justify-content: center;
-          // img {
-          //   height: 500px;
-          //   width: 500px;
-          // }
         }
-        // .hidden {
-        //   display: none;
-        // }
 
         .slider__arrow__right {
           justify-self: flex-end;
@@ -274,11 +259,7 @@ body {
         }
       }
     }
-    // .red {
-    //   // background-color: $red;
-    //   border-bottom: $bottom-height solid #ea676b;
-    //   border-top: $bottom-height solid $red;
-    // }
+
     .blue {
       background-color: #648bf0;
       .slider {
@@ -352,31 +333,7 @@ body {
                 max-width: 50px;
                 max-height: 50px;
               }
-
-              // .pic__pen {
-              //   background-image: url(../src/img/pen.png);
-              //   background-repeat: no-repeat;
-              //   background-position: center;
-              //   width: auto;
-              //   height: 40px;
-              // }
             }
-
-            // .pic__bulb {
-            //   background-image: url(../src/img/bulb.png);
-            // }
-            // .pic__heart {
-            //   background-image: url(../src/img/heart.png);
-            // }
-            // .pic__phone {
-            //   background-image: url(../src/img/phone.png);
-            // }
-            // .pic__bubble {
-            //   background-image: url(../src/img/bubble.png);
-            // }
-            // .pic__star {
-            //   background-image: url(../src/img/star.png);
-            // }
 
             .item__description {
               margin-left: 25px;
@@ -438,6 +395,8 @@ body {
         .portfolio__images {
           align-self: center;
           display: grid;
+          width: 100%;
+          height: 100%;
 
           grid-gap: 20px;
           @media screen and (min-width: 846px) {
@@ -460,8 +419,8 @@ body {
             //   grid-template-rows: repeat(12 1fr);
           }
           .images__item {
-            width: 220px;
-            height: 187px;
+            width: auto;
+            min-height: 187px;
             background-size: contain;
           }
           .image__ship {
@@ -507,7 +466,7 @@ body {
           }
         }
       }
-    }
+    } // end of portfolio
     .about__bg {
       width: 100%;
       background-color: $background-white;
@@ -527,10 +486,15 @@ body {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-column-gap: 20px;
+          width: 100%;
           .team__member {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
             .member__pic {
               height: 300px;
               width: 300px;
+              background-size: contain;
             }
             .pic__1 {
               background-image: url(../src/about-us/Adam\ Jensen.svg);
